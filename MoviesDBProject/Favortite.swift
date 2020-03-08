@@ -15,7 +15,7 @@ class Favortite: UITableViewController {
         super.viewDidLoad()
         favourite = [MoviePojo]()
         core = MyCoreData();
-       favourite = core?.featchData()
+     //  favourite = core?.featchData()
       
     }
 
@@ -28,16 +28,17 @@ class Favortite: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return favourite!.count
+       // return favourite!.count
+        return 5
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! CustumCellFavorite
+      let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! CustumCellFavorite
       
         // Configure the cell...
-        cell.title.text =   favourite![indexPath.row].title
+     /*     cell.title.text =   favourite![indexPath.row].title
         
         var s = favourite![indexPath.row].poster_path! //s="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
         cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
@@ -45,8 +46,11 @@ class Favortite: UITableViewController {
           
           
           cosmosFunc(cosmos: cell.cos, rating: favourite![indexPath.row].vote_average ?? 1)
-        
-        
+        */
+        cell.title.text = "mahmoud"
+        let s = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
+        cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
+        // cosmosFunc(cosmos: cell.cos, rating: favourite![indexPath.row].vote_average ?? 1)
         return cell
     }
 

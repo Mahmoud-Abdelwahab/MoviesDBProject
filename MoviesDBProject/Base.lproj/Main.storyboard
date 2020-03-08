@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="1886.9565217391305" y="-682.36607142857144"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Favortite-->
         <scene sceneID="SiP-1K-ilD">
             <objects>
-                <tableViewController id="UoN-47-2Er" sceneMemberID="viewController">
+                <tableViewController id="UoN-47-2Er" customClass="Favortite" customModule="MoviesDBProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gJU-xU-rsb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9F-U0-Hcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157.9710144927537" y="-20.089285714285712"/>
+            <point key="canvasLocation" x="1230" y="43"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jxN-jw-i21">
