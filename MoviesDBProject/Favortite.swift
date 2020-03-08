@@ -7,41 +7,65 @@
 //
 
 import UIKit
-
+import Cosmos
 class Favortite: UITableViewController {
-
+    var favourite:[MoviePojo]?
+    var core : MyCoreData?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        favourite = [MoviePojo]()
+        core = MyCoreData();
+       favourite = core?.featchData()
+      
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return favourite!.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+       
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! CustumCellFavorite
+      
         // Configure the cell...
-
+        cell.title.text =   favourite![indexPath.row].title
+        
+        var s = favourite![indexPath.row].poster_path! //s="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
+        cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
+          
+          
+          
+          cosmosFunc(cosmos: cell.cos, rating: favourite![indexPath.row].vote_average ?? 1)
+        
+        
         return cell
     }
-    */
 
+    func cosmosFunc(cosmos:CosmosView , rating :Double ) {
+         // Change the cosmos view rating
+    
+        cosmos.rating = rating
+
+         // Change the text
+        cosmos.text = "(123)"
+
+         // Called when user finishes changing the rating by lifting the finger from the view.
+         // This may be a good place to save the rating in the database or send to the server.
+        cosmos.didFinishTouchingCosmos = { rating in }
+
+         // A closure that is called when user changes the rating by touching the view.
+         // This can be used to update UI as the rating is being changed by moving a finger.
+       cosmos.didTouchCosmos = { rating in }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

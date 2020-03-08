@@ -16,10 +16,13 @@ class MyNetworkManger{
     init(home:Home) {
         myDelegate = home as? GetMovieApiDelegate ;
     }
-        
-    func getConnection() {
+      
+   
+    
+    
+    func getConnection(URL:String) {
         var movies = [MoviePojo]()
-        Alamofire.request(MovieURl).responseJSON
+        Alamofire.request(URL).responseJSON
             { response in if let jsonObject = response.result.value{
         let movieArray = jsonObject as! Dictionary<String, Any>
                 

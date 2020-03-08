@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import Cosmos
 class CustumCellFavorite: UITableViewCell {
-
+    @IBOutlet weak var cos: CosmosView!
+    @IBOutlet weak var title: UILabel!
     @IBOutlet weak var Fav_Image: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

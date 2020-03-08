@@ -13,52 +13,43 @@ import SDWebImage
 private let reuseIdentifier = "Cell"
 
 class Home: UICollectionViewController {
-   
+   let BaseURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
+     let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
+    
+     var LikedMovies = [MoviePojo]();
     var MoviesArray = [MoviePojo]();
     @IBOutlet weak var menu: UIBarButtonItem!
     
     let dropDown = DropDown()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // The view to which the drop down will appear on
-        dropDown.anchorView = menu // UIView or UIBarButtonItem
-
-        // The list of items to display. Can be changed dynamically
-        dropDown.dataSource = ["Populatity", "Top Rating"]
-        // Action triggered on selection
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-          print("Selected item: \(item) at index: \(index)")
-        }
-
-        // Will set a custom width instead of the anchor view width
-        
-        dropDown.width = 200
-       
-     //   dropDown.hide()
         
         let myNetwork = MyNetworkManger(home: self);
-       myNetwork.getConnection();
-        
+        myNetwork.getConnection(URL: self.BaseURL);
 
-        // The list of array to display. Can be changed dynamically
-      //  dropDown.optionArray = ["Option 1", "Option 2", "Option 3"]
-        //Its Id Values and its optional
-      //  dropDown.optionIds = [1,23,54,22]
+        // The view to which the drop down will appear on
+               dropDown.anchorView = menu // UIView or UIBarButtonItem
 
-        
+               // The list of items to display. Can be changed dynamically
+               dropDown.dataSource = ["Populatity", "Release Date"]
+               // Action triggered on selection
+               dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                if item == "Populatity"{
+                    myNetwork.getConnection(URL: self.BaseURL);
 
-        // The the Closure returns Selected Index and String
-        //dropDown.didSelect{(selectedText , index ,id) in
-   //  self.valueLabel.text = "Selected String: \(selectedText) \n index: \(index)"
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+                }else{
+                    myNetwork.getConnection(URL: self.Release_dateURL);
 
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+                }
+                 print("Selected item: \(item) at index: \(index)")
+               
+               }
 
-        // Do any additional setup after loading the view.
+               // Will set a custom width instead of the anchor view width
+               
+               dropDown.width = 200
+              
+            //   dropDown.hide()
         
         
         	
@@ -138,6 +129,14 @@ class Home: UICollectionViewController {
     }
     */
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        var obj = MoviePojo(id: MoviesArray[indexPath.row].id, popularity: MoviesArray[indexPath.row].popularity, vote_average: MoviesArray[indexPath.row].vote_average, title: MoviesArray[indexPath.row].title, release_date: MoviesArray[indexPath.row].release_date, overview: MoviesArray[indexPath.row].overview, poster_path: MoviesArray[indexPath.row].poster_path);
+        
+        ////  get video list here and then presnt this object data in another view
+        
+    }
+    
     /*
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
@@ -145,6 +144,9 @@ class Home: UICollectionViewController {
     }
     */
 
+    
+    
+    
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {

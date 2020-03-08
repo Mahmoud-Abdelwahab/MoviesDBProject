@@ -13,6 +13,7 @@ class CustumCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cos: CosmosView!
     @IBOutlet weak var MyTitle: UILabel!
     @IBOutlet weak var MyImage: UIImageView!
- 
+    @IBOutlet weak var like: UIImageView!
+    
     
 }

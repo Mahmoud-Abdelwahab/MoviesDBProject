@@ -26,6 +26,7 @@
 		BB32EB7A241299CF0010EC31 /* CustumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32EB79241299CF0010EC31 /* CustumCollectionViewCell.swift */; };
 		BB32EB7C2412A12A0010EC31 /* film.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BB32EB7B2412A12A0010EC31 /* film.jpg */; };
 		BB32EB7E2412C2F80010EC31 /* MyNetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32EB7D2412C2F80010EC31 /* MyNetworkManger.swift */; };
+		BB64AFA02415711700AA4922 /* MyCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB64AF9F2415711700AA4922 /* MyCoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BB32EB79241299CF0010EC31 /* CustumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustumCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB32EB7B2412A12A0010EC31 /* film.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = film.jpg; sourceTree = "<group>"; };
 		BB32EB7D2412C2F80010EC31 /* MyNetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetworkManger.swift; sourceTree = "<group>"; };
+		BB64AF9F2415711700AA4922 /* MyCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoreData.swift; sourceTree = "<group>"; };
 		C2297576817ECFBC355CA37C /* Pods-MoviesDBProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesDBProject.debug.xcconfig"; path = "Target Support Files/Pods-MoviesDBProject/Pods-MoviesDBProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F79D807B18108C5FAB6D6F7E /* Pods-MoviesDBProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesDBProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-MoviesDBProjectTests/Pods-MoviesDBProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 				BB32EB4E241286EA0010EC31 /* LaunchScreen.storyboard */,
 				BB32EB51241286EA0010EC31 /* Info.plist */,
 				BB32EB49241286E90010EC31 /* MoviesDBProject.xcdatamodeld */,
+				BB64AF9F2415711700AA4922 /* MyCoreData.swift */,
 				BB32EB73241288C90010EC31 /* Home.swift */,
 				BB32EB752412893A0010EC31 /* Favortite.swift */,
 				BB32EB79241299CF0010EC31 /* CustumCollectionViewCell.swift */,
@@ -434,6 +437,7 @@
 			files = (
 				BB32EB762412893A0010EC31 /* Favortite.swift in Sources */,
 				BB32EB7A241299CF0010EC31 /* CustumCollectionViewCell.swift in Sources */,
+				BB64AFA02415711700AA4922 /* MyCoreData.swift in Sources */,
 				BB2A8E7524143D660069AA6A /* MoviePojo.swift in Sources */,
 				BB32EB4B241286E90010EC31 /* MoviesDBProject.xcdatamodeld in Sources */,
 				BB32EB7E2412C2F80010EC31 /* MyNetworkManger.swift in Sources */,

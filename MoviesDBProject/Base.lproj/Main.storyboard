@@ -47,6 +47,11 @@
                                             <rect key="frame" x="0.0" y="216" width="181" height="27"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5HM-Pg-jYq">
+                                            <rect key="frame" x="142" y="8" width="31" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="wBZ-Bh-1KR" firstAttribute="top" secondItem="krO-U1-u6D" secondAttribute="top" constant="216" id="1uE-17-ux4"/>
@@ -67,6 +72,7 @@
                                     <outlet property="MyImage" destination="hkf-Xj-QSk" id="Y9y-l0-KZb"/>
                                     <outlet property="MyTitle" destination="MNd-9l-EGy" id="zLQ-0p-RMi"/>
                                     <outlet property="cos" destination="wBZ-Bh-1KR" id="YmW-IF-gJL"/>
+                                    <outlet property="like" destination="5HM-Pg-jYq" id="zH5-M0-NeT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -114,20 +120,32 @@
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aA-1S-gfm" customClass="CosmosView" customModule="Cosmos">
-                                            <rect key="frame" x="48" y="111" width="124" height="39"/>
+                                            <rect key="frame" x="20" y="91" width="124" height="39"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIX-0S-4Ln">
+                                            <rect key="frame" x="20" y="129" width="374" height="21"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="G9S-TO-PSb" secondAttribute="trailing" id="AxC-nr-LOG"/>
                                         <constraint firstItem="G9S-TO-PSb" firstAttribute="top" secondItem="EiG-1l-ZIm" secondAttribute="top" id="KQP-Ow-OwL"/>
+                                        <constraint firstItem="oIX-0S-4Ln" firstAttribute="bottom" secondItem="EiG-1l-ZIm" secondAttribute="bottomMargin" id="Vic-ca-Oc0"/>
                                         <constraint firstItem="G9S-TO-PSb" firstAttribute="leading" secondItem="EiG-1l-ZIm" secondAttribute="leading" id="dNx-7V-xgk"/>
+                                        <constraint firstItem="oIX-0S-4Ln" firstAttribute="leading" secondItem="EiG-1l-ZIm" secondAttribute="leadingMargin" id="gbD-zL-0hx"/>
                                         <constraint firstAttribute="bottom" secondItem="G9S-TO-PSb" secondAttribute="bottom" id="qOZ-OL-DJV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oIX-0S-4Ln" secondAttribute="trailing" id="rr7-Ka-nIb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="Fav_Image" destination="G9S-TO-PSb" id="86P-2K-uzK"/>
+                                    <outlet property="cos" destination="1aA-1S-gfm" id="9tJ-Ww-GOi"/>
+                                    <outlet property="title" destination="oIX-0S-4Ln" id="f7t-3c-K46"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -188,4 +206,7 @@
             <point key="canvasLocation" x="1134.7826086956522" y="-682.36607142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="64" height="54"/>
+    </resources>
 </document>
