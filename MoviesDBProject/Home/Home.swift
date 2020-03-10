@@ -13,6 +13,8 @@ import SDWebImage
 private let reuseIdentifier = "Cell"
 
 class Home: UICollectionViewController {
+    
+    
    let BaseURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
      let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
     
@@ -131,7 +133,17 @@ class Home: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        var obj = MoviePojo(id: MoviesArray[indexPath.row].id, popularity: MoviesArray[indexPath.row].popularity, vote_average: MoviesArray[indexPath.row].vote_average, title: MoviesArray[indexPath.row].title, release_date: MoviesArray[indexPath.row].release_date, overview: MoviesArray[indexPath.row].overview, poster_path: MoviesArray[indexPath.row].poster_path);
+        let obj = MoviePojo(id: MoviesArray[indexPath.row].id, popularity: MoviesArray[indexPath.row].popularity, vote_average: MoviesArray[indexPath.row].vote_average, title: MoviesArray[indexPath.row].title, release_date: MoviesArray[indexPath.row].release_date, overview: MoviesArray[indexPath.row].overview, poster_path: MoviesArray[indexPath.row].poster_path);
+              
+        let myNet = MyNetworkManger(home: self);
+        let myID =  MoviesArray[indexPath.row].id! ;
+         
+           // myID
+        myNet.getVideos(id: 157336)
+        let details = self.storyboard?.instantiateViewController(identifier: "details")as!Details
+                
+        details.myPojo = obj ;
+        self.navigationController?.pushViewController(details, animated: true)
         
         ////  get video list here and then presnt this object data in another view
         

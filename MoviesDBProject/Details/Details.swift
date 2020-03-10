@@ -7,12 +7,23 @@
 //
 import Foundation
 import UIKit
-
-class Details: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+import Cosmos
+class Details: UITableViewController,
+UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    var myPojo : MoviePojo?
+    @IBOutlet weak var review: UILabel!
+    
+    @IBOutlet weak var myTitle: UILabel!
+    @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var overview: UILabel!
+    @IBOutlet weak var releaseYear: UILabel!
+    @IBOutlet weak var cosmos: CosmosView!
     override func viewDidLoad() {
           super.viewDidLoad()
         
-
+       // myPojo=MoviePojo();
       }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5;
@@ -24,7 +35,7 @@ class Details: UITableViewController, UICollectionViewDelegate, UICollectionView
         let cell:CustomDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomDetailsCell
         
     
-        cell.myImage.image = UIImage(named:"film.jpg")
+     //   cell.myImage.image = UIImage(named:"film.jpg")
           
           return cell
           // Configure the cell
