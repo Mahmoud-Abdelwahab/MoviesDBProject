@@ -11,12 +11,15 @@ import Foundation
 class MyNetworkManger{
   
     var myDelegate:GetMovieApiDelegate?
+    var myVideoDelegate : VideosDelegate?
     private  var MovieURl = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
     
     init(home:Home) {
         myDelegate = home as? GetMovieApiDelegate ;
     }
-    
+    init(details:Details) {
+        myVideoDelegate = details as? VideosDelegate ;
+    }
     
       
       
@@ -54,10 +57,10 @@ class MyNetworkManger{
     
     func getVideos(id : Int){
         
-        var videosList = [Int]()
-        
-        
-      
+    //    var vedioArray = [String]();
+
+       
+       var vedioArray = Array<String>()
         
         
         var ViedoURL : String = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=6c91a3562a4da002fd32cd0819428f2e"
@@ -65,30 +68,24 @@ class MyNetworkManger{
                Alamofire.request(ViedoURL).responseJSON
                    { response in if let jsonObject = response.result.value{
                let movieArray = jsonObject as! Dictionary<String, Any>
-                       
+            //https://api.themoviedb.org/3/movie/157336/videos?api_key=6c91a3562a4da002fd32cd0819428f2e
+              
+                       let jsonArray = movieArray["results"]
+                    for item in ((jsonArray as? [AnyObject])!)
+                         {
+                            let uri = item["key"]as!String
+                            let fullURL = "https://www.youtube.com/watch?v=\(uri)"
+                            vedioArray.append(fullURL)
+                        
+                         }
+                    print(vedioArray)
+                  
+                       self.myVideoDelegate?.getVideos(videos:vedioArray)
                     
-                    print(movieArray)
-//                       let jsonArray = movieArray["results"]
-//
-//                       for item in jsonArray as! [AnyObject] {
-//                           //Do stuff
-//                           var preUrl="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
-//                           var poster = item["poster_path"] as?String //
-//                           preUrl += poster ?? "";
-//                         //  let Origianl = preUrl + poster!
-//                           //https://image.tmdb.org/t/p/w600_and_h900_bestv2//
-//                           //https://image.tmdb.org/t/p/w600_and_h900_bestv2//bDlDnHzNZRF3wbd1xWjK9in1kKb.jpg
-//                           let myObj = MoviePojo(id: item["id"]as?Int, popularity: item["popularity"] as? Double, vote_average: item["vote_average"] as? Double, title: item["title"]as? String, release_date: item["release_date"]as? String, overview: item["overview"]as? String, poster_path: preUrl)
-//
-//                           movies.append(myObj)
-//                           }
-//                       self.myDelegate?.getMovieArray(arr: movies)
-//                       }
+                       }
                        }
         
     }
     
         
     }
-
-}

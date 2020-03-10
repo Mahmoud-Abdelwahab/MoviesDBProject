@@ -10,11 +10,12 @@ import UIKit
 import Cosmos
 class Details: UITableViewController,
 UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    
+    var cell :CustomDetailsCell!
+    var myVideos : [String]?
     var myPojo : MoviePojo?
     @IBOutlet weak var review: UILabel!
     
+    @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myTitle: UILabel!
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var overview: UILabel!
@@ -22,27 +23,51 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var cosmos: CosmosView!
     override func viewDidLoad() {
           super.viewDidLoad()
+        myVideos=[String]();
         
-       // myPojo=MoviePojo();
+        myTitle.text = myPojo?.title
+        overview.text = myPojo?.overview
+        releaseYear.text = myPojo?.release_date
+        cosmosFunc(cosmos: cosmos, rating: myPojo?.vote_average ?? 1)
+        myImage?.sd_setImage(with: URL(string: myPojo!.poster_path!), placeholderImage: UIImage(named: "placeholder.png"))
+        
       }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5;
+        return  myVideos!.count ;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
-        let cell:CustomDetailsCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomDetailsCell
+         cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomDetailsCell
         
+        let url = URL(string: myVideos![indexPath.row])
+          let requestObj = URLRequest(url: url! as URL)
+        cell.myWebView.load(requestObj)
     
-     //   cell.myImage.image = UIImage(named:"film.jpg")
           
+        
           return cell
           // Configure the cell
         
     }
     
+    func cosmosFunc(cosmos:CosmosView , rating :Double ) {
+         // Change the cosmos view rating
+    
+        cosmos.rating = rating
 
+         // Change the text
+        cosmos.text = "(123)"
+
+         // Called when user finishes changing the rating by lifting the finger from the view.
+         // This may be a good place to save the rating in the database or send to the server.
+        cosmos.didFinishTouchingCosmos = { rating in }
+
+         // A closure that is called when user changes the rating by touching the view.
+         // This can be used to update UI as the rating is being changed by moving a finger.
+       cosmos.didTouchCosmos = { rating in }
+    }
   
 
     // MARK: - Table view data source
@@ -112,4 +137,17 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     }
     */
 
+}
+
+
+extension Details : VideosDelegate{
+    func getVideos(videos: [String]){
+        print(videos)
+        
+        myVideos = videos
+        self.myCollectionView.reloadData();
+   
+    }
+   
+   
 }

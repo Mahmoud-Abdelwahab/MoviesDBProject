@@ -255,17 +255,17 @@
                                                     <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ReleaseYear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwC-Jg-cva">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ReleaseYear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwC-Jg-cva">
                                                     <rect key="frame" x="161" y="83" width="233" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-Gg-sD5" customClass="CosmosView" customModule="Cosmos">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-Gg-sD5" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="212" y="53" width="120" height="20"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OverView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-iC-7ZV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="OverView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-iC-7ZV">
                                                     <rect key="frame" x="161" y="112" width="233" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="VcF-uA-bWU"/>
@@ -336,6 +336,7 @@
                     </tableView>
                     <connections>
                         <outlet property="cosmos" destination="2Ca-Gg-sD5" id="jLn-uu-yhQ"/>
+                        <outlet property="myCollectionView" destination="WRW-ol-r3Y" id="8iS-p1-yVK"/>
                         <outlet property="myImage" destination="eWO-Jz-muj" id="0Vs-fb-5JS"/>
                         <outlet property="myTitle" destination="FhV-Qn-Rg9" id="vCc-kb-BBm"/>
                         <outlet property="overview" destination="ERT-iC-7ZV" id="2Np-lH-Cwz"/>
