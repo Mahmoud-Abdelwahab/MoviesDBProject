@@ -10,6 +10,8 @@ target 'MoviesDBProject' do
  pod 'SDWebImage', '~> 5.0'
  pod 'Alamofire', '~> 4.0'
 pod 'DropDown', '2.3.13'
+pod 'YouTubePlayer-Swift', '~> 1.0'
+pod 'youtube-ios-player-helper-swift'
   target 'MoviesDBProjectTests' do
     inherit! :search_paths
     # Pods for testing

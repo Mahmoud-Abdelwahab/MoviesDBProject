@@ -8,8 +8,11 @@
 
 import UIKit
  import WebKit
+import YouTubePlayer_Swift
 class CustomDetailsCell: UICollectionViewCell {
     
+   
+    @IBOutlet weak var myYouTubeViewer: YouTubePlayerView!
     
-    @IBOutlet weak var myWebView: WKWebView!
+
 }

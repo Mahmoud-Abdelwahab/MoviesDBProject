@@ -5,12 +5,16 @@ PODS:
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
+  - youtube-ios-player-helper-swift (1.1)
+  - YouTubePlayer-Swift (1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Cosmos (~> 21.0)
   - DropDown (= 2.3.13)
   - SDWebImage (~> 5.0)
+  - youtube-ios-player-helper-swift
+  - YouTubePlayer-Swift (~> 1.0)
 
 SPEC REPOS:
   trunk:
@@ -18,13 +22,17 @@ SPEC REPOS:
     - Cosmos
     - DropDown
     - SDWebImage
+    - youtube-ios-player-helper-swift
+    - YouTubePlayer-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  youtube-ios-player-helper-swift: 51a3c5325317c8271d0c7985c1bbe5a252ffb2fd
+  YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
 
-PODFILE CHECKSUM: b9b5217413f12572c56e7d3ddfd0aa02860332a6
+PODFILE CHECKSUM: abb51104a3678364e01503513fba9aa600c1dfac
 
 COCOAPODS: 1.8.4

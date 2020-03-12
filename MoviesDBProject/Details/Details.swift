@@ -8,12 +8,23 @@
 import Foundation
 import UIKit
 import Cosmos
+import YouTubePlayer_Swift
 class Details: UITableViewController,
 UICollectionViewDelegate, UICollectionViewDataSource {
     var cell :CustomDetailsCell!
     var myVideos : [String]?
+    var myReviewsContent : [String]?
+    var myReviewsAuther : [String]?
     var myPojo : MoviePojo?
-    @IBOutlet weak var review: UILabel!
+    
+    static var liked = false;
+ 
+    @IBOutlet var myTableView: UITableView!
+    
+    @IBOutlet weak var autherContent: UILabel!
+   @IBOutlet weak var myReviewsContentLable: UILabel!
+    
+    @IBOutlet weak var FavoritImage: UIImageView!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myTitle: UILabel!
@@ -21,17 +32,48 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var overview: UILabel!
     @IBOutlet weak var releaseYear: UILabel!
     @IBOutlet weak var cosmos: CosmosView!
+    
+    
     override func viewDidLoad() {
+        
           super.viewDidLoad()
+        
         myVideos=[String]();
+        myReviewsAuther = [String]();
+        myReviewsContent = [String]();
         
         myTitle.text = myPojo?.title
         overview.text = myPojo?.overview
         releaseYear.text = myPojo?.release_date
         cosmosFunc(cosmos: cosmos, rating: myPojo?.vote_average ?? 1)
-        myImage?.sd_setImage(with: URL(string: myPojo!.poster_path!), placeholderImage: UIImage(named: "placeholder.png"))
+        myImage?.sd_setImage(with: URL(string: myPojo!.poster_path!), placeholderImage: UIImage(named: "film.jpg"))
+        
+        if  (myReviewsContent!.count>0 && myReviewsAuther!.count>0)
+          {
+            print("Contains a value!")
+            autherContent.text = myReviewsAuther?.first
+            myReviewsContentLable.text = myReviewsContent?.first
+            
+          
+           }
+        
+       
         
       }
+    
+    
+    @IBAction  func AddFavourite(_ sender: Any) {
+     
+      FavoritImage.image = FavoritImage.image?.withRenderingMode(.alwaysTemplate)
+      FavoritImage.tintColor = UIColor.systemOrange
+               
+               
+           
+         
+     }
+    
+
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return  myVideos!.count ;
     }
@@ -40,12 +82,12 @@ UICollectionViewDelegate, UICollectionViewDataSource {
         
         
          cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomDetailsCell
-        
-        let url = URL(string: myVideos![indexPath.row])
-          let requestObj = URLRequest(url: url! as URL)
-        cell.myWebView.load(requestObj)
-    
-          
+        cell.myYouTubeViewer.playerVars = ["playsinline":1 as AnyObject]
+        if myVideos != nil{
+ cell.myYouTubeViewer.loadVideoID(myVideos![indexPath.row])
+        }else{
+            
+        }
         
           return cell
           // Configure the cell
@@ -140,14 +182,30 @@ UICollectionViewDelegate, UICollectionViewDataSource {
 }
 
 
+
 extension Details : VideosDelegate{
     func getVideos(videos: [String]){
-        print(videos)
+       
         
         myVideos = videos
+         print("videos ********* ")
         self.myCollectionView.reloadData();
    
     }
    
+   
+}
+
+
+extension Details : GetReviewsDelegate{
+    func getReviews(reviewsAuther: [String], reviewsContent: [String]) {
+         myReviewsAuther = reviewsAuther ;
+        myReviewsContent = reviewsContent ;
+        autherContent.text = myReviewsAuther?.first
+        
+        
+     myReviewsContentLable.text = myReviewsContent?.first
+      //  myTableView.reloadData()
+    }
    
 }

@@ -16,3 +16,4 @@ struct MoviePojo {
     var overview:String?
     var poster_path:String?
 }
+

@@ -12,6 +12,7 @@ class MyNetworkManger{
   
     var myDelegate:GetMovieApiDelegate?
     var myVideoDelegate : VideosDelegate?
+    var myReviewDelegate : GetReviewsDelegate?
     private  var MovieURl = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
     
     init(home:Home) {
@@ -19,6 +20,7 @@ class MyNetworkManger{
     }
     init(details:Details) {
         myVideoDelegate = details as? VideosDelegate ;
+          myReviewDelegate = details as? GetReviewsDelegate ;
     }
     
       
@@ -64,23 +66,48 @@ class MyNetworkManger{
         
         
         var ViedoURL : String = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=6c91a3562a4da002fd32cd0819428f2e"
-        
+    
+    
                Alamofire.request(ViedoURL).responseJSON
                    { response in if let jsonObject = response.result.value{
                let movieArray = jsonObject as! Dictionary<String, Any>
             //https://api.themoviedb.org/3/movie/157336/videos?api_key=6c91a3562a4da002fd32cd0819428f2e
-              
-                       let jsonArray = movieArray["results"]
-                    for item in ((jsonArray as? [AnyObject])!)
-                         {
-                            let uri = item["key"]as!String
-                            let fullURL = "https://www.youtube.com/watch?v=\(uri)"
-                            vedioArray.append(fullURL)
+              print(movieArray)
+                   if movieArray.keys.contains("status_message") {
+                      // contains key
+                    } else if movieArray.keys.contains("results"){
+                      // does not contain key
+                    
+                    if let val = movieArray["results"] {
+                        // now val is not nil and the Optional has been unwrapped, so use it
                         
-                         }
-                    print(vedioArray)
-                  
-                       self.myVideoDelegate?.getVideos(videos:vedioArray)
+                        
+
+                             let jsonArray = movieArray["results"]
+                                                for item in ((jsonArray as? [AnyObject])!)
+                                                     {
+                                                        let uri = item["key"]as!String
+                                                       
+                                                        vedioArray.append(uri)
+                                                    
+                                                     }
+                                              
+                             
+                        
+                           
+                         
+                            self.myVideoDelegate?.getVideos(videos:vedioArray)
+                        
+                    }
+                    
+                    
+                    
+                    }
+                    
+                    
+                    
+                        
+                         
                     
                        }
                        }
@@ -88,4 +115,51 @@ class MyNetworkManger{
     }
     
         
+    
+    //getReviews
+    
+    func getReviews(id : Int) {
+        
+        
+        var reviewsContent = Array<String>()
+                var reviewsAuther = Array<String>()
+               
+               var ViedoURL : String = "https://api.themoviedb.org/3/movie/\(id)/reviews?api_key=6c91a3562a4da002fd32cd0819428f2e"
+               
+                      Alamofire.request(ViedoURL).responseJSON
+                          { response in if let jsonObject = response.result.value{
+                      let movieArray = jsonObject as! Dictionary<String, Any>
+                   //https://api.themoviedb.org/3/movie/157336/videos?api_key=6c91a3562a4da002fd32cd0819428f2e
+                     
+                            if movieArray.keys.contains("results"){
+                                   let jsonArray = movieArray["results"]
+                                
+                                for item in ((jsonArray as? [AnyObject])!)
+                                                               {
+                       
+                                                                  let uri = item["content"]as!String
+                                                                let auther = item["author"]as!String
+                                                                 
+                                                                  reviewsContent.append(uri)
+                                                                reviewsAuther.append(auther)
+                                                                
+                                                   }
+                                               
+                                self.myReviewDelegate?.getReviews(reviewsAuther: reviewsAuther, reviewsContent: reviewsContent)
+                                print("*****---> reviews")
+                                                             }
+                                
+                            }
+                            
+                           
+                          
+                              }
+        
+        
+        
+        
+    }
+    
+    
+    
     }

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18F203" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavoriteIDTable" representedClassName="FavoriteIDTable" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="Movie" representedClassName="MovieDB" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="overview" optional="YES" attributeType="String"/>
@@ -11,5 +14,6 @@
     </entity>
     <elements>
         <element name="Movie" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="FavoriteIDTable" positionX="-54" positionY="45" width="128" height="58"/>
     </elements>
 </model>

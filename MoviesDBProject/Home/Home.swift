@@ -15,17 +15,17 @@ private let reuseIdentifier = "Cell"
 class Home: UICollectionViewController {
     
     
-   let BaseURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
-     let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
+   let BaseURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=3&api_key=6c91a3562a4da002fd32cd0819428f2e"
+     let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.desc&page=3&api_key=6c91a3562a4da002fd32cd0819428f2e"
     
      var LikedMovies = [MoviePojo]();
     var MoviesArray = [MoviePojo]();
     @IBOutlet weak var menu: UIBarButtonItem!
     
-    let dropDown = DropDown()
+   let dropDown = DropDown()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let myNetwork = MyNetworkManger(home: self);
         myNetwork.getConnection(URL: self.BaseURL);
 
@@ -113,7 +113,7 @@ class Home: UICollectionViewController {
 
          // Change the text
         cosmos.text = "(123)"
-
+      cosmos.settings.disablePanGestures = true
          // Called when user finishes changing the rating by lifting the finger from the view.
          // This may be a good place to save the rating in the database or send to the server.
         cosmos.didFinishTouchingCosmos = { rating in }
@@ -147,9 +147,10 @@ class Home: UICollectionViewController {
         let myNet = MyNetworkManger(details: details);
         let myID =  MoviesArray[indexPath.row].id! ;
          
-           // myID
+           // myID643102
         myNet.getVideos(id: myID)
-      
+        myNet.getReviews(id: myID)
+       // myNet.getReviews(id: myID)
                 
         details.myPojo = obj;
         self.navigationController?.pushViewController(details, animated: true)
