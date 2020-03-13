@@ -37,20 +37,13 @@ class Home: UICollectionViewController {
                           print("Internet connection is on.")
                         myNetwork.getConnection(URL: self.BaseURL);
                        DispatchQueue.main.async {
-                           //Do UI Code here.
-                       
-                              
-                           //Call Google maps methods.
-                      //  MoviesArray = myNetwork.getConnection(URL: BaseURL);
                        }
                         
                       } else {
                           print("There's no internet connection.")
-                       
             DispatchQueue.main.async {
-//                         self.MoviesArray = (self.myCo?.featchData())!
-                                          //   = cor.loadSavedData()
-                self.MoviesArray = self.myCore.featchData() ;
+                self.MoviesArray = (self.myCore.featchData())
+                                 
                    self.collectionView.reloadData()
                        }
                       
@@ -222,6 +215,7 @@ class Home: UICollectionViewController {
 extension Home:GetMovieApiDelegate{
     func getMovieArray(arr: [MoviePojo]) {
         MoviesArray = arr;
+        self.myCore.deleteAllData()
         self.myCore.AddToCoreData(ApiArray: MoviesArray)
         self.collectionView.reloadData()
     }

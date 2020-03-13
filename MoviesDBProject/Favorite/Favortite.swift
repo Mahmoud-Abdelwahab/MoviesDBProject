@@ -9,29 +9,22 @@
 import UIKit
 import Cosmos
 class Favortite: UITableViewController {
-    var favourite:[Double]?
-       var favouriteListTest:[MoviePojo]?
-           var favouriteList:[MoviePojo]?
-    var core : MyCoreData?
+    var   favourite = [Double]()
+  
+           var    favouriteList = [MoviePojo]()
+    
+   
+                      
+    
+    var core  = MyCoreData.sharedCore;
     
     override func viewWillAppear(_ animated: Bool) {
-       favourite = [Double]()
-                      favouriteListTest = [MoviePojo]()
-                        favouriteList = [MoviePojo]()
-                             core = MyCoreData.sharedCore;
-                      
-                            favourite = core?.featchFavouriteIdList()
-                           
-                        favouriteList = core?.featchMovieList(idArr: favourite!)
-                            print("Data Tamam ->>> ")
-                     
-               self.tableView.reloadData()
-               
-       
-        
+     
+        core.myCoreDataDeleget = self ; 
+        core.featchFavouriteIdList()
+                                   
     
-        
-        
+                     
       
     }
     
@@ -51,7 +44,7 @@ class Favortite: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
        // return favourite!.count
-        return favouriteList!.count
+        return favouriteList.count
     }
 
     
@@ -60,14 +53,14 @@ class Favortite: UITableViewController {
       let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! CustumCellFavorite
       
         // Configure the cell...
-          cell.title.text =   favouriteList![indexPath.row].title
+        cell.title.text =   favouriteList[indexPath.row].title
         
-        var s = favouriteList![indexPath.row].poster_path! //s="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
+        var s = favouriteList[indexPath.row].poster_path! //s="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
         cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
           
           
           
-          cosmosFunc(cosmos: cell.cos, rating: favouriteList![indexPath.row].vote_average ?? 1)
+        cosmosFunc(cosmos: cell.cos, rating: favouriteList[indexPath.row].vote_average ?? 1)
       
 //        cell.title.text = "mahmoud"
 //        let s = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
@@ -137,4 +130,21 @@ class Favortite: UITableViewController {
     }
     */
 
+}
+
+
+
+extension Favortite : CoreDataDelegate
+{
+    func getFavourite(movies: [MoviePojo]) {
+        
+       favouriteList = movies
+          self.tableView.reloadData()
+        
+        
+    }
+    
+    
+    
+    
 }

@@ -624,11 +624,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2062AFA2-4615-4821-A278-460293FA1E70 - e027e7c0d9a8d22d"
+                  uuid = "2062AFA2-4615-4821-A278-460293FA1E70 - 366693d5d90afb3d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MoviesDBProject.MyCoreData.featchFavouriteIdList() -&gt; Swift.Array&lt;Swift.Double&gt;"
+                  symbolName = "MoviesDBProject.MyCoreData.featchFavouriteIdList() -&gt; ()"
                   moduleName = "MoviesDBProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/CoreData/MyCoreData.swift"
@@ -639,11 +639,11 @@
                   offsetFromSymbolStart = "884">
                </Location>
                <Location
-                  uuid = "2062AFA2-4615-4821-A278-460293FA1E70 - e027e7c0d9a8d22d"
+                  uuid = "2062AFA2-4615-4821-A278-460293FA1E70 - 366693d5d90afb3d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MoviesDBProject.MyCoreData.featchFavouriteIdList() -&gt; Swift.Array&lt;Swift.Double&gt;"
+                  symbolName = "MoviesDBProject.MyCoreData.featchFavouriteIdList() -&gt; ()"
                   moduleName = "MoviesDBProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/CoreData/MyCoreData.swift"
@@ -651,7 +651,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "218"
                   endingLineNumber = "218"
-                  offsetFromSymbolStart = "2665">
+                  offsetFromSymbolStart = "2690">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -675,38 +675,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6B271A5A-E782-43E0-9184-6E90A17372EB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
-            landmarkName = "featchFavouriteIdList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "88C42510-3CFF-4407-B055-0EEA70977E1E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "featchFavouriteIdList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "99655D56-29DC-4727-A250-D87C8C192910"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -714,8 +682,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "MyCoreData"
             landmarkType = "3">
          </BreakpointContent>
@@ -730,8 +698,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "featchFavouriteIdList()"
             landmarkType = "7">
          </BreakpointContent>
@@ -746,9 +714,9 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -778,9 +746,9 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -794,10 +762,10 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "Favortite"
-            landmarkType = "3">
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -810,8 +778,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -826,8 +794,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "354"
-            endingLineNumber = "354"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -842,8 +810,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "361"
-            endingLineNumber = "361"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -858,8 +826,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "367"
-            endingLineNumber = "367"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -874,8 +842,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -890,8 +858,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -906,8 +874,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -922,8 +890,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "345"
-            endingLineNumber = "345"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -938,8 +906,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -954,8 +922,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -970,8 +938,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -986,8 +954,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1002,8 +970,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1018,8 +986,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "353"
-            endingLineNumber = "353"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1034,8 +1002,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "359"
-            endingLineNumber = "359"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1066,8 +1034,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "featchFavouriteIdList()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1082,8 +1050,8 @@
             filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "363"
-            endingLineNumber = "363"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "featchMovieList(idArr:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1098,9 +1066,9 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1114,10 +1082,10 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "Favortite"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1130,8 +1098,8 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1146,8 +1114,8 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1162,8 +1130,8 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1178,9 +1146,105 @@
             filePath = "MoviesDBProject/Favorite/Favortite.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A705D4F8-5921-48B4-8C63-A4E9DF07E04F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
+            landmarkName = "featchMovieList(idArr:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24481405-6497-4FF8-9349-F1A8B2BA8383"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/CoreData/MyCoreData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "featchMovieList(idArr:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F5B90EE-2AA2-4336-A2CA-917DFB51E4B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Favorite/Favortite.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "getFavourite(movies:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A83A95AC-368B-41BB-ADBB-6A713F9AEB0B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Favorite/Favortite.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "getFavourite(movies:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "016D8845-9D67-4B17-BB19-908C05AD5AAE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Favorite/Favortite.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "getFavourite(movies:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67269617-66BC-4B6A-97AE-CE5FBAF7CA69"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Favorite/Favortite.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "getFavourite(movies:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

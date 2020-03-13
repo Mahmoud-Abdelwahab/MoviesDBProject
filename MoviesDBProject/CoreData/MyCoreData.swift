@@ -13,7 +13,7 @@ class MyCoreData{
     
     // singletone object 
     static let sharedCore = MyCoreData();
-    
+    var myCoreDataDeleget : CoreDataDelegate?
     private init(){
         
     }
@@ -191,7 +191,7 @@ class MyCoreData{
     
     // fetch favouriteLsit
     
-    func  featchFavouriteIdList() -> [Double] {
+    func  featchFavouriteIdList() {
         
            var myMoviesIDCore = [Double]()
            
@@ -229,48 +229,17 @@ class MyCoreData{
            {
             
                  let id = moviesArray[index].value(forKey:"id") as! Double
-//                 let overview = moviesArray[index].value(forKey:"overview") as! String
-//                 let popularity = moviesArray[index].value(forKey:"popularity") as! Double
-//                 let poster_path = moviesArray[index].value(forKey: "poster_path") as! String
-//                 let release_date =   moviesArray[index].value(forKey:"release_date") as! String
-//                 let title =   moviesArray[index].value(forKey:"title") as! String
-//                 let vote_average =   moviesArray[index].value(forKey:"vote_average") as! Double
-            
-//               var  pojo = id
-             //  let r = Double(myrating)
-//               pojo.overview = overview
-//              // let rel=Int(myrelase)
-//               pojo.popularity = popularity
-//               pojo.poster_path = poster_path
-//               pojo.release_date = release_date;
-//                pojo.title = title;
-//                pojo.vote_average = vote_average;
                myMoviesIDCore.append(id)
              
            
            }
            
-           
-           
-            return myMoviesIDCore
-           
+        
+        featchMovieList( idArr: myMoviesIDCore)
            
                    } // end of retrive func
        
        
-    
-    
-    
-//    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-//               let context:NSManagedObjectContext = appDel.managedObjectContext!
-//               context.deleteObject(myData[indexPath.row] as NSManagedObject)
-//               myData.removeAtIndex(indexPath.row)
-//               context.save(nil)
-//
-    
-    
-    
-    
     
     
     func dislike(id:Double)
@@ -306,7 +275,7 @@ class MyCoreData{
     
     
     
-    func  featchMovieList(idArr : [Double]) -> [MoviePojo] {
+    func  featchMovieList(idArr : [Double]){
             
                var myMoviesIDCore = [MoviePojo]()
                
@@ -319,11 +288,11 @@ class MyCoreData{
                    
                    //3 create fetch request
                    
-                   let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Movie")
                    
         
         for index in 0..<idArr.count{
-        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Movie")
+
                     fetchRequest.predicate = NSPredicate(format: "id = %f",idArr[index])
                    //let prdictae = NSPredicate(format: "title == %@", "Movie1")
                    
@@ -331,6 +300,7 @@ class MyCoreData{
                    
                 do{
                        moviesArray = try manageContext.fetch(fetchRequest)
+                    
                        
                    }catch let error{
                        
@@ -339,13 +309,13 @@ class MyCoreData{
                        
                    }
 
-                             let id = moviesArray[index].value(forKey:"id") as! Double
-                             let overview = moviesArray[index].value(forKey:"overview") as! String
-                             let popularity = moviesArray[index].value(forKey:"popularity") as! Double
-                             let poster_path = moviesArray[index].value(forKey: "poster_path") as! String
-                             let release_date =   moviesArray[index].value(forKey:"release_date") as! String
-                             let title =   moviesArray[index].value(forKey:"title") as! String
-                             let vote_average =   moviesArray[index].value(forKey:"vote_average") as! Double
+                             let id = moviesArray[0].value(forKey:"id") as! Double
+                             let overview = moviesArray[0].value(forKey:"overview") as! String
+                             let popularity = moviesArray[0].value(forKey:"popularity") as! Double
+                             let poster_path = moviesArray[0].value(forKey: "poster_path") as! String
+                             let release_date =   moviesArray[0].value(forKey:"release_date") as! String
+                             let title =   moviesArray[0].value(forKey:"title") as! String
+                             let vote_average =   moviesArray[0].value(forKey:"vote_average") as! Double
                         
                        var  pojo = MoviePojo();
                                       pojo.id = id
@@ -364,13 +334,33 @@ class MyCoreData{
           
             print(myMoviesIDCore)
                
-                return myMoviesIDCore
+        
+        myCoreDataDeleget?.getFavourite(movies: myMoviesIDCore)
+
+             //   return myMoviesIDCore
                
                
                        } // end of retrive func
     
     
     
-    
+    func deleteAllData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Movie")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do
+        {
+            let results = try managedContext.fetch(fetchRequest)
+            for managedObject in results
+            {
+                let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
+                managedContext.delete(managedObjectData)
+            }
+        } catch let error as NSError {
+            print("Detele all data error : \(error) \(error.userInfo)")
+        }
+    }
    
 }
