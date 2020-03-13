@@ -9,14 +9,36 @@
 import UIKit
 import Cosmos
 class Favortite: UITableViewController {
-    var favourite:[MoviePojo]?
+    var favourite:[Double]?
+       var favouriteListTest:[MoviePojo]?
+           var favouriteList:[MoviePojo]?
     var core : MyCoreData?
+    
+    override func viewWillAppear(_ animated: Bool) {
+       favourite = [Double]()
+                      favouriteListTest = [MoviePojo]()
+                        favouriteList = [MoviePojo]()
+                             core = MyCoreData.sharedCore;
+                      
+                            favourite = core?.featchFavouriteIdList()
+                           
+                        favouriteList = core?.featchMovieList(idArr: favourite!)
+                            print("Data Tamam ->>> ")
+                     
+               self.tableView.reloadData()
+               
+       
+        
+    
+        
+        
+      
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        favourite = [MoviePojo]()
-        core = MyCoreData();
-     //  favourite = core?.featchData()
-      
+       
+   
     }
 
     // MARK: - Table view data source
@@ -29,7 +51,7 @@ class Favortite: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
        // return favourite!.count
-        return 5
+        return favouriteList!.count
     }
 
     
@@ -38,18 +60,18 @@ class Favortite: UITableViewController {
       let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! CustumCellFavorite
       
         // Configure the cell...
-     /*     cell.title.text =   favourite![indexPath.row].title
+          cell.title.text =   favouriteList![indexPath.row].title
         
-        var s = favourite![indexPath.row].poster_path! //s="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
+        var s = favouriteList![indexPath.row].poster_path! //s="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
         cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
           
           
           
-          cosmosFunc(cosmos: cell.cos, rating: favourite![indexPath.row].vote_average ?? 1)
-        */
-        cell.title.text = "mahmoud"
-        let s = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
-        cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
+          cosmosFunc(cosmos: cell.cos, rating: favouriteList![indexPath.row].vote_average ?? 1)
+      
+//        cell.title.text = "mahmoud"
+//        let s = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
+//        cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
         // cosmosFunc(cosmos: cell.cos, rating: favourite![indexPath.row].vote_average ?? 1)
         return cell
     }

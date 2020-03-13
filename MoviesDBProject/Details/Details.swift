@@ -79,12 +79,27 @@ UICollectionViewDelegate, UICollectionViewDataSource {
         
       //  FavoritImage.image =
       //    FavoritImage.tintColor = UIColor.systemOrange
-         //if(liked == false )
+   
 //       FavoritImage.tintColor.ciColor.green
 //           FavoritImage.image?.withRenderingMode(.alwaysTemplate)
+    
+        let mycore = MyCoreData.sharedCore;
+        if(liked == false )
+        {
+            mycore.AddFavouriteCoreData(movieId: myPojo?.id ?? 0.0)
+            liked = true
+            print("Like ******** > ")
+
+        }else if( liked == true)
+        {
+           // call delete with id then make liked = false
+            mycore.dislike(id: myPojo!.id!)
+            liked = false ;
+            print("Like ******** > ")
+
+        }
         
-        
-               print("Like ******** > ")
+         //liked = true
    
     }
     

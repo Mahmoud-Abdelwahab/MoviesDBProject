@@ -39,12 +39,12 @@ class MyNetworkManger{
                 for item in jsonArray as! [AnyObject] {
                     //Do stuff
                     var preUrl="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
-                    var poster = item["poster_path"] as?String //
+                    let poster = item["poster_path"] as?String //
                     preUrl += poster ?? "";
                   //  let Origianl = preUrl + poster!
                     //https://image.tmdb.org/t/p/w600_and_h900_bestv2//
                     //https://image.tmdb.org/t/p/w600_and_h900_bestv2//bDlDnHzNZRF3wbd1xWjK9in1kKb.jpg
-                    let myObj = MoviePojo(id: item["id"]as?Int, popularity: item["popularity"] as? Double, vote_average: item["vote_average"] as? Double, title: item["title"]as? String, release_date: item["release_date"]as? String, overview: item["overview"]as? String, poster_path: preUrl)
+                    let myObj = MoviePojo(id: item["id"]as?Double, popularity: item["popularity"] as? Double, vote_average: item["vote_average"] as? Double, title: item["title"]as? String, release_date: item["release_date"]as? String, overview: item["overview"]as? String, poster_path: preUrl)
                     
                     movies.append(myObj)
                     }
@@ -57,7 +57,7 @@ class MyNetworkManger{
     
     //////////// videos /////////////
     
-    func getVideos(id : Int){
+    func getVideos(id : Double){
         
     //    var vedioArray = [String]();
 
@@ -118,7 +118,7 @@ class MyNetworkManger{
     
     //getReviews
     
-    func getReviews(id : Int) {
+    func getReviews(id : Double) {
         
         
         var reviewsContent = Array<String>()

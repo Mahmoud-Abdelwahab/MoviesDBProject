@@ -26,7 +26,7 @@ class Home: UICollectionViewController {
     @IBOutlet weak var menu: UIBarButtonItem!
     let monitor = NWPathMonitor()
    let dropDown = DropDown()
-  let myCore = MyCoreData()
+    let myCore = MyCoreData.sharedCore;
     
     override func viewDidLoad() {
         super.viewDidLoad()

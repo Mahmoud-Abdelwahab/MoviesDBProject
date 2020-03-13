@@ -11,6 +11,13 @@ import CoreData
 import UIKit
 class MyCoreData{
     
+    // singletone object 
+    static let sharedCore = MyCoreData();
+    
+    private init(){
+        
+    }
+    
     
     func AddToCoreData( ApiArray :[MoviePojo] ){
         
@@ -101,7 +108,7 @@ class MyCoreData{
          for index in 0..<moviesArray.count
         {
          
-              let id = moviesArray[index].value(forKey:"id") as! Int
+              let id = moviesArray[index].value(forKey:"id")
               let overview = moviesArray[index].value(forKey:"overview") as! String
               let popularity = moviesArray[index].value(forKey:"popularity") as! Double
               let poster_path = moviesArray[index].value(forKey: "poster_path") as! String
@@ -110,7 +117,7 @@ class MyCoreData{
               let vote_average =   moviesArray[index].value(forKey:"vote_average") as! Double
          
             var  pojo = MoviePojo();
-            pojo.id = id
+            pojo.id = (id as! Double)
           //  let r = Double(myrating)
             pojo.overview = overview
            // let rel=Int(myrelase)
@@ -124,16 +131,12 @@ class MyCoreData{
         
         }
         
-        
-        
          return myMoviesCore
         
         
                 } // end of retrive func
     
-    
-    
-    
+  
     // add favourtie
     
     func AddFavouriteCoreData( movieId : Double ){
@@ -255,6 +258,118 @@ class MyCoreData{
                    } // end of retrive func
        
        
+    
+    
+    
+//    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+//               let context:NSManagedObjectContext = appDel.managedObjectContext!
+//               context.deleteObject(myData[indexPath.row] as NSManagedObject)
+//               myData.removeAtIndex(indexPath.row)
+//               context.save(nil)
+//
+    
+    
+    
+    
+    
+    
+    func dislike(id:Double)
+    {
+      guard  let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate else{return}
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"FavoriteIDTable")
+        
+        fetchRequest.predicate = NSPredicate(format: "id = %f",id)
+        do
+        {
+            let test = try  managedContext.fetch(fetchRequest)
+            let objectToBeDeleted = test[0] as! NSManagedObject
+            managedContext.delete(objectToBeDeleted)
+            
+            do{
+                try managedContext.save()
+                
+            }catch{
+                print(error)
+            }
+            
+        }
+        catch {
+            print("Could not delete")
+
+        }
+    }
+    
+  
+    
+    
+    
+    func  featchMovieList(idArr : [Double]) -> [MoviePojo] {
+            
+               var myMoviesIDCore = [MoviePojo]()
+               
+               var moviesArray = [NSManagedObject]()            //1 app delgate
+                   let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                   
+                   //2 manage object context
+                   
+                   let manageContext = appDelegate.persistentContainer.viewContext
+                   
+                   //3 create fetch request
+                   
+                   let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Movie")
+                   
+        
+        for index in 0..<idArr.count{
+        
+                    fetchRequest.predicate = NSPredicate(format: "id = %f",idArr[index])
+                   //let prdictae = NSPredicate(format: "title == %@", "Movie1")
+                   
+           //        fetchRequest.predicate = prdictae
+                   
+                do{
+                       moviesArray = try manageContext.fetch(fetchRequest)
+                       
+                   }catch let error{
+                       
+                       
+                       print(error)
+                       
+                   }
+
+                             let id = moviesArray[index].value(forKey:"id") as! Double
+                             let overview = moviesArray[index].value(forKey:"overview") as! String
+                             let popularity = moviesArray[index].value(forKey:"popularity") as! Double
+                             let poster_path = moviesArray[index].value(forKey: "poster_path") as! String
+                             let release_date =   moviesArray[index].value(forKey:"release_date") as! String
+                             let title =   moviesArray[index].value(forKey:"title") as! String
+                             let vote_average =   moviesArray[index].value(forKey:"vote_average") as! Double
+                        
+                       var  pojo = MoviePojo();
+                                      pojo.id = id
+                                    //  let r = Double(myrating)
+                                      pojo.overview = overview
+                                     // let rel=Int(myrelase)
+                                      pojo.popularity = popularity
+                                      pojo.poster_path = poster_path
+                                      pojo.release_date = release_date;
+                                       pojo.title = title;
+                                       pojo.vote_average = vote_average;
+                                      myMoviesIDCore.append(pojo)
+            
+            
+        }///
+          
+            print(myMoviesIDCore)
+               
+                return myMoviesIDCore
+               
+               
+                       } // end of retrive func
+    
+    
     
     
    

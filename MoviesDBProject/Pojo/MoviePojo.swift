@@ -8,7 +8,7 @@
 
 import Foundation
 struct MoviePojo {
-    var id:Int?
+    var id:Double?
     var popularity:Double?
     var vote_average:Double?
     var title:String?
