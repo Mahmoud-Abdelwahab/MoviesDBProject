@@ -9,10 +9,15 @@
 import UIKit
 
 class Reviews: UITableViewController {
-
+ var reviewsAutherArray: [String]!
+        var  reviewsContentArray :[String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+//         reviewsAutherArray = [String]();
+//           reviewsContentArray = [String]();
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,23 +29,33 @@ class Reviews: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if reviewsContentArray != nil {
+        return reviewsContentArray!.count
+        }else {return 0}
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:CustomReviews = tableView.dequeueReusableCell(withIdentifier: "Reviews", for: indexPath) as! CustomReviews
+        
+        if reviewsAutherArray.count > 0 && reviewsContentArray.count > 0
+        {
+            cell.user.text = reviewsAutherArray![indexPath.row]
+            
+            cell.contentText.text = reviewsContentArray![indexPath.row]
+            
+        }
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

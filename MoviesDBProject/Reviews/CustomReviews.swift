@@ -10,7 +10,8 @@ import UIKit
 
 class CustomReviews: UITableViewCell {
 
-    @IBOutlet weak var content: UITextField!
+    @IBOutlet weak var contentText: UILabel!
+    
     @IBOutlet weak var user: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

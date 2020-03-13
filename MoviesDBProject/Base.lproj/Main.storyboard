@@ -353,7 +353,7 @@
                                                     </constraints>
                                                     <state key="normal" title="SeeMore..."/>
                                                     <connections>
-                                                        <action selector="seeMore:" destination="mrk-av-RPZ" eventType="touchUpInside" id="wCP-LO-P3m"/>
+                                                        <action selector="goToMoreReviews:" destination="mrk-av-RPZ" eventType="touchUpInside" id="H9L-wc-M4D"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-QZ-7QK">
@@ -409,42 +409,47 @@
         <!--Reviews-->
         <scene sceneID="Zae-Bg-k5J">
             <objects>
-                <tableViewController id="Zdx-Jb-7J7" customClass="Reviews" customModule="MoviesDBProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Review" id="Zdx-Jb-7J7" customClass="Reviews" customModule="MoviesDBProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QQP-z3-936">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="267" id="oBt-gs-Aky" customClass="CustomReviews" customModule="MoviesDBProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="267"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Reviews" rowHeight="434" id="oBt-gs-Aky" customClass="CustomReviews" customModule="MoviesDBProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="434"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBt-gs-Aky" id="ebh-aP-4GD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="434"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-RS-hiC">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-RS-hiC">
                                             <rect key="frame" x="26" y="17" width="368" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="C7V-Ro-7Vl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="23"/>
+                                            <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAZ-4b-uec">
+                                            <rect key="frame" x="6" y="44" width="408" height="390"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vza-4m-Orc">
-                                            <rect key="frame" x="26" y="44" width="368" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vza-4m-Orc" firstAttribute="top" secondItem="HwN-RS-hiC" secondAttribute="bottom" constant="6" id="7Hb-N2-3xl"/>
+                                        <constraint firstItem="mAZ-4b-uec" firstAttribute="leading" secondItem="ebh-aP-4GD" secondAttribute="leading" constant="6" id="2lT-CL-N4Y"/>
                                         <constraint firstItem="HwN-RS-hiC" firstAttribute="leading" secondItem="ebh-aP-4GD" secondAttribute="leadingMargin" constant="6" id="802-kM-l3z"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="HwN-RS-hiC" secondAttribute="trailing" id="E0B-5I-vMM"/>
-                                        <constraint firstItem="vza-4m-Orc" firstAttribute="leading" secondItem="ebh-aP-4GD" secondAttribute="leadingMargin" constant="6" id="Nd8-0x-SMf"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="vza-4m-Orc" secondAttribute="trailing" id="PXP-yD-7Ec"/>
+                                        <constraint firstAttribute="trailing" secondItem="mAZ-4b-uec" secondAttribute="trailing" id="GQF-7t-Lom"/>
+                                        <constraint firstItem="mAZ-4b-uec" firstAttribute="top" secondItem="HwN-RS-hiC" secondAttribute="bottom" constant="6" id="RCD-c8-cG6"/>
+                                        <constraint firstAttribute="bottom" secondItem="mAZ-4b-uec" secondAttribute="bottom" id="Xbd-EK-5nJ"/>
                                         <constraint firstItem="HwN-RS-hiC" firstAttribute="top" secondItem="ebh-aP-4GD" secondAttribute="topMargin" constant="6" id="f5a-lZ-HR4"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="content" destination="vza-4m-Orc" id="KvV-Jc-J2Z"/>
+                                    <outlet property="contentText" destination="mAZ-4b-uec" id="aPG-et-tjW"/>
                                     <outlet property="user" destination="HwN-RS-hiC" id="ipJ-vu-d0c"/>
                                 </connections>
                             </tableViewCell>
@@ -454,6 +459,7 @@
                             <outlet property="delegate" destination="Zdx-Jb-7J7" id="xwx-DS-9iO"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="XD0-Yb-ZcO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4c-Dl-poG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

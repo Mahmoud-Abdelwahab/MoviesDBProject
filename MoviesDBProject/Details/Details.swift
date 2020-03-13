@@ -26,8 +26,7 @@ UICollectionViewDelegate, UICollectionViewDataSource {
    @IBOutlet weak var myReviewsContentLable: UILabel!
     
     
-    @IBAction func seeMore(_ sender: Any) {
-    }
+   
     @IBOutlet weak var FavoritImage: UIImageView!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -37,6 +36,17 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var releaseYear: UILabel!
     @IBOutlet weak var cosmos: CosmosView!
     
+    @IBAction func goToMoreReviews(_ sender: Any) {
+        
+        let reviewVC = self.storyboard?.instantiateViewController(identifier: "Review")as!Reviews
+            
+            reviewVC.reviewsAutherArray = myReviewsAuther ?? [""]
+            
+            
+            
+            reviewVC.reviewsContentArray = myReviewsContent ?? [""]
+            self.navigationController?.pushViewController(reviewVC, animated: true)
+    }
     
     override func viewDidLoad() {
         
@@ -70,16 +80,15 @@ UICollectionViewDelegate, UICollectionViewDataSource {
       //  FavoritImage.image =
       //    FavoritImage.tintColor = UIColor.systemOrange
          //if(liked == false )
-       FavoritImage.tintColor.ciColor.green
-           FavoritImage.image?.withRenderingMode(.alwaysTemplate)
+//       FavoritImage.tintColor.ciColor.green
+//           FavoritImage.image?.withRenderingMode(.alwaysTemplate)
+        
+        
                print("Like ******** > ")
-        
-        
-        
-        
+   
     }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return  myVideos!.count ;
     }
     
@@ -177,15 +186,21 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     }
     */
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+      
+        print(" prepare from seugue ----> ")
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
+        
+        
+        
+    }*/
+  
 
 }
 
