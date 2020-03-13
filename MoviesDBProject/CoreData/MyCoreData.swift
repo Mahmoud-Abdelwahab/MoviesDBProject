@@ -77,7 +77,7 @@ class MyCoreData{
             
             //3 create fetch request
             
-            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Movies")
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Movie")
             
             
             //let prdictae = NSPredicate(format: "title == %@", "Movie1")

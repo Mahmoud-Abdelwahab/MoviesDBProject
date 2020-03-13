@@ -19,11 +19,15 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     
     static var liked = false;
  
+    
     @IBOutlet var myTableView: UITableView!
     
     @IBOutlet weak var autherContent: UILabel!
    @IBOutlet weak var myReviewsContentLable: UILabel!
     
+    
+    @IBAction func seeMore(_ sender: Any) {
+    }
     @IBOutlet weak var FavoritImage: UIImageView!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -53,27 +57,28 @@ UICollectionViewDelegate, UICollectionViewDataSource {
             print("Contains a value!")
             autherContent.text = myReviewsAuther?.first
             myReviewsContentLable.text = myReviewsContent?.first
-            
+
           
            }
-        
-       
-        
-      }
-    
-    
-    @IBAction  func AddFavourite(_ sender: Any) {
-     
-      FavoritImage.image = FavoritImage.image?.withRenderingMode(.alwaysTemplate)
-      FavoritImage.tintColor = UIColor.systemOrange
-               
-               
-           
-         
-     }
     
 
+      }
     
+    var liked  = false ;
+    @IBAction func AddToFavouriteBtn(_ sender: Any) {
+        
+      //  FavoritImage.image =
+      //    FavoritImage.tintColor = UIColor.systemOrange
+         //if(liked == false )
+       FavoritImage.tintColor.ciColor.green
+           FavoritImage.image?.withRenderingMode(.alwaysTemplate)
+               print("Like ******** > ")
+        
+        
+        
+        
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return  myVideos!.count ;
     }
@@ -82,9 +87,12 @@ UICollectionViewDelegate, UICollectionViewDataSource {
         
         
          cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomDetailsCell
-        cell.myYouTubeViewer.playerVars = ["playsinline":1 as AnyObject]
+//        cell.myYouTubeViewer.playerVars = ["playsinline":1 as AnyObject]
+        
         if myVideos != nil{
- cell.myYouTubeViewer.loadVideoID(myVideos![indexPath.row])
+// cell.myYouTubeViewer.loadVideoID(myVideos![indexPath.row])
+    cell.myYouTubeViewer.load(videoId: myVideos![indexPath.row])
+            
         }else{
             
         }

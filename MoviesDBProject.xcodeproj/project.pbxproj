@@ -33,6 +33,7 @@
 		BBDA7EEC2419D71D00BEB4B5 /* GetReviewsDekegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA7EEB2419D71D00BEB4B5 /* GetReviewsDekegate.swift */; };
 		BBDA7EEE241A3A3F00BEB4B5 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA7EED241A3A3F00BEB4B5 /* Reviews.swift */; };
 		BBDA7EF1241ABCE100BEB4B5 /* NsCodingID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA7EF0241ABCE100BEB4B5 /* NsCodingID.swift */; };
+		BBE7F8DF241AF6C4002D4A1F /* CustomReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7F8DE241AF6C4002D4A1F /* CustomReviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		BBDA7EEB2419D71D00BEB4B5 /* GetReviewsDekegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReviewsDekegate.swift; sourceTree = "<group>"; };
 		BBDA7EED241A3A3F00BEB4B5 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		BBDA7EF0241ABCE100BEB4B5 /* NsCodingID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NsCodingID.swift; sourceTree = "<group>"; };
+		BBE7F8DE241AF6C4002D4A1F /* CustomReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomReviews.swift; sourceTree = "<group>"; };
 		C2297576817ECFBC355CA37C /* Pods-MoviesDBProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesDBProject.debug.xcconfig"; path = "Target Support Files/Pods-MoviesDBProject/Pods-MoviesDBProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F79D807B18108C5FAB6D6F7E /* Pods-MoviesDBProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesDBProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-MoviesDBProjectTests/Pods-MoviesDBProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,14 +241,14 @@
 				BB32EB51241286EA0010EC31 /* Info.plist */,
 				BB32EB49241286E90010EC31 /* MoviesDBProject.xcdatamodeld */,
 				BB32EB46241286E90010EC31 /* Main.storyboard */,
+				BB143B022417BD590046D46D /* Home */,
 				BB143B072417BDF20046D46D /* Details */,
 				BB143B012417BD240046D46D /* CoreData */,
-				BB143B022417BD590046D46D /* Home */,
 				BB143B032417BD8B0046D46D /* Favorite */,
+				BBDA7EEF241A3A5600BEB4B5 /* Reviews */,
 				BB143B042417BD9E0046D46D /* Network Manager */,
 				BB143B052417BDCB0046D46D /* Pojo */,
 				BB143B062417BDD90046D46D /* Delegates */,
-				BBDA7EEF241A3A5600BEB4B5 /* Reviews */,
 			);
 			path = MoviesDBProject;
 			sourceTree = "<group>";
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDA7EED241A3A3F00BEB4B5 /* Reviews.swift */,
+				BBE7F8DE241AF6C4002D4A1F /* CustomReviews.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				BBDA7EEC2419D71D00BEB4B5 /* GetReviewsDekegate.swift in Sources */,
 				BB32EB41241286E90010EC31 /* AppDelegate.swift in Sources */,
 				BBDA7EF1241ABCE100BEB4B5 /* NsCodingID.swift in Sources */,
+				BBE7F8DF241AF6C4002D4A1F /* CustomReviews.swift in Sources */,
 				BB32EB74241288C90010EC31 /* Home.swift in Sources */,
 				BB143B0F2417CBAE0046D46D /* CustomDetailsCell.swift in Sources */,
 				BBDA7EEE241A3A3F00BEB4B5 /* Reviews.swift in Sources */,

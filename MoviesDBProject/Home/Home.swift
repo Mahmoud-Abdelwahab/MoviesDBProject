@@ -10,10 +10,13 @@ import UIKit
 import Cosmos
 import  DropDown
 import SDWebImage
+import Network
+import SystemConfiguration
 private let reuseIdentifier = "Cell"
 
 class Home: UICollectionViewController {
-    
+    let queue = DispatchQueue(label: "InternetConnectionMonitor")
+
     
    let BaseURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=3&api_key=6c91a3562a4da002fd32cd0819428f2e"
      let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.desc&page=3&api_key=6c91a3562a4da002fd32cd0819428f2e"
@@ -21,14 +24,45 @@ class Home: UICollectionViewController {
      var LikedMovies = [MoviePojo]();
     var MoviesArray = [MoviePojo]();
     @IBOutlet weak var menu: UIBarButtonItem!
-    
+    let monitor = NWPathMonitor()
    let dropDown = DropDown()
-
+  let myCore = MyCoreData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let myNetwork = MyNetworkManger(home: self);
-        myNetwork.getConnection(URL: self.BaseURL);
+       
+        monitor.pathUpdateHandler = { pathUpdateHandler in
+                      if pathUpdateHandler.status == .satisfied {
+                          print("Internet connection is on.")
+                        myNetwork.getConnection(URL: self.BaseURL);
+                       DispatchQueue.main.async {
+                           //Do UI Code here.
+                       
+                              
+                           //Call Google maps methods.
+                      //  MoviesArray = myNetwork.getConnection(URL: BaseURL);
+                       }
+                        
+                      } else {
+                          print("There's no internet connection.")
+                       
+            DispatchQueue.main.async {
+//                         self.MoviesArray = (self.myCo?.featchData())!
+                                          //   = cor.loadSavedData()
+                self.MoviesArray = self.myCore.featchData() ;
+                   self.collectionView.reloadData()
+                       }
+                      
+                      }
+                  }
 
+
+                  monitor.start(queue: queue)
+        
+        
+        
+        
         // The view to which the drop down will appear on
                dropDown.anchorView = menu // UIView or UIBarButtonItem
 
@@ -61,8 +95,6 @@ class Home: UICollectionViewController {
             dropDown.show()
        }
        
-    
-    
     
     /*
     // MARK: - Navigation
@@ -190,6 +222,7 @@ class Home: UICollectionViewController {
 extension Home:GetMovieApiDelegate{
     func getMovieArray(arr: [MoviePojo]) {
         MoviesArray = arr;
+        self.myCore.AddToCoreData(ApiArray: MoviesArray)
         self.collectionView.reloadData()
     }
     

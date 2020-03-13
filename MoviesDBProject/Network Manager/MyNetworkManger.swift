@@ -72,7 +72,7 @@ class MyNetworkManger{
                    { response in if let jsonObject = response.result.value{
                let movieArray = jsonObject as! Dictionary<String, Any>
             //https://api.themoviedb.org/3/movie/157336/videos?api_key=6c91a3562a4da002fd32cd0819428f2e
-              print(movieArray)
+             //print(movieArray)
                    if movieArray.keys.contains("status_message") {
                       // contains key
                     } else if movieArray.keys.contains("results"){
