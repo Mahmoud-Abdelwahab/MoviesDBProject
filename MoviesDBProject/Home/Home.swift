@@ -19,7 +19,7 @@ class Home: UICollectionViewController {
 
     
    let BaseURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=3&api_key=6c91a3562a4da002fd32cd0819428f2e"
-     let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.desc&page=3&api_key=6c91a3562a4da002fd32cd0819428f2e"
+     let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.desc&page=5&api_key=6c91a3562a4da002fd32cd0819428f2e"
     
      var LikedMovies = [MoviePojo]();
     var MoviesArray = [MoviePojo]();
@@ -184,6 +184,18 @@ class Home: UICollectionViewController {
         
     }
     
+   func tabBarController(_ tabBarController: UITabBarController,
+  didSelect viewController: UIViewController)
+  {
+//    if viewController is  {
+//               print("First tab")
+//           } else if viewController is SecondViewController {
+//               print("Second tab")
+//           }
+    
+    
+    }
+ 
     /*
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
@@ -215,7 +227,7 @@ class Home: UICollectionViewController {
 extension Home:GetMovieApiDelegate{
     func getMovieArray(arr: [MoviePojo]) {
         MoviesArray = arr;
-        self.myCore.deleteAllData()
+       // self.myCore.deleteAllData()
         self.myCore.AddToCoreData(ApiArray: MoviesArray)
         self.collectionView.reloadData()
     }

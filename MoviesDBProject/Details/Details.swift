@@ -16,10 +16,12 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     var myReviewsContent : [String]?
     var myReviewsAuther : [String]?
     var myPojo : MoviePojo?
-    
+    var movieArray :[MoviePojo]?
     static var liked = false;
  
+     let mycore = MyCoreData.sharedCore;
     
+    @IBOutlet weak var favBtn: UIButton!
     @IBOutlet var myTableView: UITableView!
     
     @IBOutlet weak var autherContent: UILabel!
@@ -27,7 +29,6 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     
     
    
-    @IBOutlet weak var FavoritImage: UIImageView!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myTitle: UILabel!
@@ -78,29 +79,56 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     @IBAction func AddToFavouriteBtn(_ sender: Any) {
         
       //  FavoritImage.image =
-      //    FavoritImage.tintColor = UIColor.systemOrange
    
 //       FavoritImage.tintColor.ciColor.green
 //           FavoritImage.image?.withRenderingMode(.alwaysTemplate)
     
-        let mycore = MyCoreData.sharedCore;
+       
         if(liked == false )
         {
+            
+        
+            if checkIfFileExist() != true
+            {
             mycore.AddFavouriteCoreData(movieId: myPojo?.id ?? 0.0)
             liked = true
-            print("Like ******** > ")
+            favBtn.tintColor = UIColor.green
+
+                print("Like ******** > ")
+                
+            }
 
         }else if( liked == true)
         {
            // call delete with id then make liked = false
             mycore.dislike(id: myPojo!.id!)
             liked = false ;
+            favBtn.tintColor = UIColor.orange
+
             print("Like ******** > ")
 
         }
         
          //liked = true
    
+    }
+    
+    
+    func checkIfFileExist() -> Bool {
+        var exist :Bool = false ;
+        
+     var idList = mycore.FavouriteIdList()
+        for i in idList
+        {
+            if i == myPojo?.id
+            {
+                exist = true;
+            }
+        }
+        
+        
+        
+        return exist ;
     }
     
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -227,7 +255,7 @@ extension Details : VideosDelegate{
         
         myVideos = videos
          print("videos ********* ")
-        self.myCollectionView.reloadData();
+       // self.myCollectionView.reloadData();
    
     }
    
@@ -238,12 +266,12 @@ extension Details : VideosDelegate{
 extension Details : GetReviewsDelegate{
     func getReviews(reviewsAuther: [String], reviewsContent: [String]) {
          myReviewsAuther = reviewsAuther ;
-        myReviewsContent = reviewsContent ;
-        autherContent.text = myReviewsAuther?.first
+         myReviewsContent = reviewsContent ;
+         autherContent.text = myReviewsAuther?.first
         
         
      myReviewsContentLable.text = myReviewsContent?.first
-      //  myTableView.reloadData()
+        myTableView.reloadData()
     }
    
 }

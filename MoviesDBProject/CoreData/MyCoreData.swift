@@ -75,7 +75,8 @@ class MyCoreData{
      
         var myMoviesCore = [MoviePojo]()
         
-        var moviesArray = [NSManagedObject]()            //1 app delgate
+        var moviesArray = [NSManagedObject]()
+        //1 app delgate
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             
             //2 manage object context
@@ -126,6 +127,7 @@ class MyCoreData{
             pojo.release_date = release_date;
              pojo.title = title;
              pojo.vote_average = vote_average;
+            
             myMoviesCore.append(pojo)
           
         
@@ -308,7 +310,8 @@ class MyCoreData{
                        print(error)
                        
                    }
-
+            if moviesArray.count>0
+            {
                              let id = moviesArray[0].value(forKey:"id") as! Double
                              let overview = moviesArray[0].value(forKey:"overview") as! String
                              let popularity = moviesArray[0].value(forKey:"popularity") as! Double
@@ -328,7 +331,7 @@ class MyCoreData{
                                        pojo.title = title;
                                        pojo.vote_average = vote_average;
                                       myMoviesIDCore.append(pojo)
-            
+            }
             
         }///
           
@@ -363,4 +366,63 @@ class MyCoreData{
         }
     }
    
+    
+    
+    func  FavouriteIdList()->[Double] {
+           
+              var myMoviesIDCore = [Double]()
+              
+              var moviesArray = [NSManagedObject]()            //1 app delgate
+                  let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                  
+                  //2 manage object context
+                  
+                  let manageContext = appDelegate.persistentContainer.viewContext
+                  
+                  //3 create fetch request
+                  
+                  let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "FavoriteIDTable")
+                  
+                  
+                  //let prdictae = NSPredicate(format: "title == %@", "Movie1")
+                  
+          //        fetchRequest.predicate = prdictae
+                  
+                  
+                  do{
+                      moviesArray = try manageContext.fetch(fetchRequest)
+                      
+                  }catch let error{
+                      
+                      
+                      print(error)
+                      
+                  }
+              
+         
+              // extracting data from array of managed object
+              
+               for index in 0..<moviesArray.count
+              {
+               
+                    let id = moviesArray[index].value(forKey:"id") as! Double
+                  myMoviesIDCore.append(id)
+                
+              
+              }
+              
+           
+           return myMoviesIDCore
+              
+                      } // end of retrive func
+          
+   
+    
+    
+    
+    
+    
+    
+    
+    
 }

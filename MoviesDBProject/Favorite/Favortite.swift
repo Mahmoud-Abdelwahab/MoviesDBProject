@@ -5,7 +5,6 @@
 //  Created by kasper on 3/6/20.
 //  Copyright © 2020 kasper. All rights reserved.
 //
-
 import UIKit
 import Cosmos
 class Favortite: UITableViewController {
@@ -14,18 +13,16 @@ class Favortite: UITableViewController {
            var    favouriteList = [MoviePojo]()
     
    
-                      
+    var movies :[String]?
     
     var core  = MyCoreData.sharedCore;
     
     override func viewWillAppear(_ animated: Bool) {
      
-        core.myCoreDataDeleget = self ; 
+        core.myCoreDataDeleget = self ;
         core.featchFavouriteIdList()
                                    
-    
-                     
-      
+                            
     }
     
     override func viewDidLoad() {
@@ -35,12 +32,22 @@ class Favortite: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let details = self.storyboard?.instantiateViewController(identifier: "home")as!Home
+        
+           
+            
+          self.navigationController?.pushViewController(details, animated: true)
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
        // return favourite!.count
@@ -101,14 +108,15 @@ class Favortite: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
+  
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
     }
     */
 
@@ -122,7 +130,6 @@ class Favortite: UITableViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -130,6 +137,14 @@ class Favortite: UITableViewController {
     }
     */
 
+    
+
+
+    
+    
+    
+    
+    
 }
 
 
