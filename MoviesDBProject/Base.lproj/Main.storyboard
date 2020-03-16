@@ -30,7 +30,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hkf-Xj-QSk">
-                                            <rect key="frame" x="0.0" y="0.0" width="193" height="280"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="280"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="181" id="U9Z-sX-LVn"/>
                                                 <constraint firstAttribute="height" constant="264" id="vVa-kI-XpH"/>
@@ -99,22 +99,23 @@
         <scene sceneID="SiP-1K-ilD">
             <objects>
                 <tableViewController storyboardIdentifier="Fav" id="UoN-47-2Er" customClass="Favortite" customModule="MoviesDBProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gJU-xU-rsb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gJU-xU-rsb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexTrackingBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="344" id="RbP-jY-21w" customClass="CustumCellFavorite" customModule="MoviesDBProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="344"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="322" id="RbP-jY-21w" customClass="CustumCellFavorite" customModule="MoviesDBProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="322"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RbP-jY-21w" id="EiG-1l-ZIm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="344"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.video" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-TO-PSb">
-                                            <rect key="frame" x="0.0" y="2" width="414" height="340"/>
+                                            <rect key="frame" x="0.0" y="2" width="414" height="318"/>
                                             <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="414" id="HT5-C3-q0s"/>
@@ -122,14 +123,14 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIX-0S-4Ln">
-                                            <rect key="frame" x="0.0" y="313" width="414" height="30"/>
+                                            <rect key="frame" x="0.0" y="291" width="414" height="30"/>
                                             <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                            <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="highlightedColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aA-1S-gfm" customClass="CosmosView" customModule="Cosmos">
-                                            <rect key="frame" x="144" y="288" width="127" height="20"/>
+                                            <rect key="frame" x="144" y="266" width="127" height="20"/>
                                             <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="WOF-E5-jK1"/>
@@ -209,7 +210,7 @@
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6be-Nn-Jk1" customClass="YTPlayerView" customModule="youtube_ios_player_helper_swift">
                                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="255" id="Fbd-ke-jA3"/>
                                                                             <constraint firstAttribute="width" constant="375" id="MDr-pJ-LQ5"/>
@@ -317,7 +318,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OverView" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-iC-7ZV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No OverView Available " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-iC-7ZV">
                                                     <rect key="frame" x="27" y="46" width="367" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -354,7 +355,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q8-3d-T91">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is No Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q8-3d-T91">
                                                     <rect key="frame" x="6" y="45" width="408" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="Ptp-By-Dul"/>
@@ -375,8 +376,8 @@
                                                         <action selector="goToMoreReviews:" destination="mrk-av-RPZ" eventType="touchUpInside" id="H9L-wc-M4D"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-QZ-7QK">
-                                                    <rect key="frame" x="6" y="73" width="408" height="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Reviews Available " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-QZ-7QK">
+                                                    <rect key="frame" x="6" y="73" width="408" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="408" id="LnC-nS-fCY"/>
                                                     </constraints>
@@ -434,6 +435,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Reviews" rowHeight="434" id="oBt-gs-Aky" customClass="CustomReviews" customModule="MoviesDBProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="434"/>
@@ -442,7 +444,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="434"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-RS-hiC">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-RS-hiC">
                                             <rect key="frame" x="26" y="17" width="368" height="21"/>
                                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -453,13 +455,14 @@
                                             <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="highlightedColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAZ-4b-uec">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Reviews Available " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAZ-4b-uec">
                                             <rect key="frame" x="6" y="44" width="408" height="390"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <constraints>
                                         <constraint firstItem="mAZ-4b-uec" firstAttribute="leading" secondItem="ebh-aP-4GD" secondAttribute="leading" constant="6" id="2lT-CL-N4Y"/>
                                         <constraint firstItem="HwN-RS-hiC" firstAttribute="leading" secondItem="ebh-aP-4GD" secondAttribute="leadingMargin" constant="6" id="802-kM-l3z"/>
@@ -518,11 +521,15 @@
         <scene sceneID="Y5h-Xn-ESL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pVR-fv-dol" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="0aI-tp-vuS"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="0aI-tp-vuS">
+                        <color key="badgeColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iaX-xX-tGM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -537,7 +544,9 @@
         <scene sceneID="thy-Xe-PoE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNk-TL-Er7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="F9A-x7-kiI"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="F9A-x7-kiI">
+                        <color key="badgeColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g5U-Ga-hL2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -557,4 +566,5 @@
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="questionmark.video" catalog="system" width="64" height="40"/>
     </resources>
+    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>

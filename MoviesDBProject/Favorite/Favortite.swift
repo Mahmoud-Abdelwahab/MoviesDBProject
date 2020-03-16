@@ -18,10 +18,10 @@ class Favortite: UITableViewController {
     var core  = MyCoreData.sharedCore;
     
     override func viewWillAppear(_ animated: Bool) {
-     
+    
         core.myCoreDataDeleget = self ;
         core.featchFavouriteIdList()
-                                   
+       
                             
     }
     
@@ -148,21 +148,48 @@ class Favortite: UITableViewController {
     }
     */
 
-    
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-          
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-              core.dislike(id: favouriteList[indexPath.row].id!
-            )
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
-    
+  
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+        self.tableView.beginUpdates()
+          core.dislike(id: favouriteList[indexPath.row].id!)
+          //
+         // tableView.deleteRows(at: [indexPath], with: .fade)
+       
+        self.tableView.reloadData()
+        self.tableView.endUpdates()
+      } else if editingStyle == .insert {
+          // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+      }
+        self.tableView.reloadData()
+  }
 
+    
+    
+    
+    
+      // Override to support editing the table view.
+//        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//            if editingStyle == .delete {
+//              core.dislike(id: favouriteList[indexPath.row].id!)
+//                   self.tableView.reloadData()
+//            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//                // Delete the row from the data source
+//               // self.tableView.deleteRows(at: [indexPath], with: .fade)
+//
+//            } else if editingStyle == .insert {
+//                // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//            }
+//
+//
+//    //          self.tableView.reloadData()//
+//        }
+        
+    
+    
+    
+    
+    
   
     
     /*

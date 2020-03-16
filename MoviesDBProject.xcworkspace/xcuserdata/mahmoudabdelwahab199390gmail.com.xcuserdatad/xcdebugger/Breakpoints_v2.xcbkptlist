@@ -947,560 +947,622 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C01CF145-57CB-4179-A52E-A525E0123550"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
-            landmarkName = "getVideos(videos:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6620A1F3-6925-48E6-BE96-61DE8D456CD5"
+            uuid = "B2953596-C923-48D2-A12A-3E63407B9A42"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
-            landmarkName = "getVideos(videos:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D39674C4-EFE8-4774-B62A-B7B892E29610"
+            uuid = "7D2A8C99-E9BB-49A4-A742-1F20EC4FB68C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
-            landmarkName = "getVideos(videos:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CFAF5DDC-6E8E-4DFA-AC9C-A340EBFDDEC2"
+            uuid = "316E4F90-9ED3-4FFC-8FAE-9A8586C8C421"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
-            landmarkName = "getVideos(videos:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8A83B819-EAD2-4361-A1FC-373DB6CDFA31"
+            uuid = "1D8B9648-D882-4C65-8313-B4E03B8843BE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0152D557-8B0D-410E-A69D-9D91472DAC76"
+            uuid = "7E657A56-2F67-43A6-BB22-690041EA96FC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E657A56-2F67-43A6-BB22-690041EA96FC - 70b9f271e791818a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MoviesDBProject.MyNetworkManger.getVideos(id: Swift.Double) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1530">
+               </Location>
+               <Location
+                  uuid = "7E657A56-2F67-43A6-BB22-690041EA96FC - 70b9f271e791818a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MoviesDBProject.MyNetworkManger.getVideos(id: Swift.Double) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1592">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E131505B-27F9-4813-9474-1F79C58B5529"
+            uuid = "E2DA0EDB-F41E-4199-8291-99182DC78E34"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F373E114-ADC7-4132-823C-212AE0A2B30D"
+            uuid = "EFFD8B4E-1796-40B7-8730-4EED0AA3EE4A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9C49F8BF-1814-4549-9ED6-169EFADA69F1"
+            uuid = "B63C9B69-CDF6-490D-890D-B6ABA9516341"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D434D062-731F-4DCB-B469-E8D882D1846B"
+            uuid = "C5F76115-AC6F-40A1-9A88-7FBD1ED3D26E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FDB9D607-4AD6-49D6-8F88-6EEE51CC198F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "348DD8E6-D40F-482C-A5E9-54CEAA0CDBB8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "337"
-            endingLineNumber = "337"
-            landmarkName = "getReviews(reviewsAuther:reviewsContent:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "68904A37-B6D0-41A9-AE9E-8E923074F743"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
-            landmarkName = "getReviews(reviewsAuther:reviewsContent:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "83CA0051-E947-4024-AAE9-FB8787B92FCF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
-            landmarkName = "getReviews(reviewsAuther:reviewsContent:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FB49BC93-BC60-4E45-8995-6AF2B79F38D5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
-            landmarkName = "getReviews(reviewsAuther:reviewsContent:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F263AC50-A21F-44C3-B991-1EDCC07AF3F0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
-            landmarkName = "getVideos(videos:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D2D0AE6D-0332-4423-A777-7C18D367E1A5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "AddToFavouriteBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "86836467-EA49-4398-900F-2C51922433A5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "AddToFavouriteBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DEDD004E-612C-4732-B07C-67772CADB978"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "AddToFavouriteBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D2114B28-3D8E-4D22-9306-0BB83DD91BF5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "AddToFavouriteBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2BB6237A-9C1C-4E5C-B7E6-31B5C8A19071"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6572CDE9-F1CD-47A7-B7AE-EDE72E640E23"
+            uuid = "4369FA50-A581-4548-A236-912312ACDFC4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "57FC5804-022E-4653-B30B-387C2F689E26"
+            uuid = "D75DE401-1A55-4155-B443-39F76AC143FF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6588BFD3-C3D0-4D5D-8CD3-5C6CB0004ED6"
+            uuid = "B3E7F904-1A81-4C6A-8617-096C3342C118"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B73E554F-9662-4BC7-AA54-203A6C408FC7"
+            uuid = "016A026A-4B5B-48C8-9DBA-2207B8DFB89F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "93A97974-E767-4438-9C71-B2D477057F4F"
+            uuid = "F886BDC8-64DD-41CE-A56F-C73D4ABCBB1C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getVideos(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0988DCCE-A446-421B-ACE6-89DF7E1D9AAE"
+            uuid = "08625D10-DBB9-46EF-9043-E2CAA68F2D07"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8ADECB29-3A74-46AC-BD68-996447BDB090"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8ADECB29-3A74-46AC-BD68-996447BDB090 - 6941df03504eee9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoviesDBProject.MyNetworkManger.getVideos(id: Swift.Double) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "783">
+               </Location>
+               <Location
+                  uuid = "8ADECB29-3A74-46AC-BD68-996447BDB090 - 70b9f271e791818a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MoviesDBProject.MyNetworkManger.getVideos(id: Swift.Double) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "243">
+               </Location>
+               <Location
+                  uuid = "8ADECB29-3A74-46AC-BD68-996447BDB090 - 70b9f271e791818a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MoviesDBProject.MyNetworkManger.getVideos(id: Swift.Double) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69D0256E-4FAD-4B99-ACAF-40D4AC9EB74F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D09EE49E-DC46-4B44-A250-0501228F7E7F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA31CF3A-8F35-4F71-A824-B492E894DA04"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76090E7E-4743-4C59-A9F1-871B0FCA3214"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CDE6BC3-DC89-4279-9A31-0CA4D97D9E79"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B330CB93-13F7-4D00-87F7-A2F73E2E1D1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getVideos(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E598217F-51F0-40C1-ACE5-EAD82A91DAE2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "getReviews(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D99F946-0273-4A6C-BD9A-CE7439C01896"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "getReviews(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D99F946-0273-4A6C-BD9A-CE7439C01896 - 9136589a9e17ee88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoviesDBProject.MyNetworkManger.getReviews(id: Swift.Double) -&gt; ()"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "892">
+               </Location>
+               <Location
+                  uuid = "8D99F946-0273-4A6C-BD9A-CE7439C01896 - 1420794fb7565383"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MoviesDBProject.MyNetworkManger.getReviews(id: Swift.Double) -&gt; ()"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "8D99F946-0273-4A6C-BD9A-CE7439C01896 - 1420794fb7565383"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in MoviesDBProject.MyNetworkManger.getReviews(id: Swift.Double) -&gt; ()"
+                  moduleName = "MoviesDBProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab199390gmail.com/Desktop/MoviesDBProject/MoviesDBProject/Network%20Manager/MyNetworkManger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "352">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "587DF90F-AA21-414C-9B70-9772C114BE63"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
             endingLineNumber = "134"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            landmarkName = "getReviews(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5FC0B551-6246-42F1-A238-5A2C6B672A65"
+            uuid = "26BA54C3-C461-45B2-899F-831CE782A5CD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
             endingLineNumber = "136"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            landmarkName = "getReviews(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A7A2A17F-179B-4349-B385-574F606BF10E"
+            uuid = "FDA849AB-E33F-48A3-B598-EB50FB9101E7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "getReviews(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "151BF522-051F-407F-9B34-1C483D179787"
+            uuid = "9D366A17-08B0-4418-91DE-19029CA5BEB3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "AddToFavouriteBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FB03EED0-64DC-46E9-A5A9-F5F109418F5D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "AddToFavouriteBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4204F44A-9EE5-4CEE-AEEB-D7F2BA601936"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "AddToFavouriteBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6EF8C4A-361D-4D64-A371-F8C4E1659D87"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
             endingLineNumber = "143"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            landmarkName = "getReviews(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B000664C-34F5-4F29-9070-C443F328F841"
+            uuid = "501E4E93-2098-4DA5-A4A8-92014C4CA7EF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "getReviews(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "12E5AC87-A599-41D5-BF4C-62E6F669CF24"
+            uuid = "551D158B-0622-46D5-B469-E8933C69CD9F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBProject/Details/Details.swift"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "AddToFavouriteBtn(_:)"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "getReviews(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "723AE0F1-287C-41EB-B850-01101D26F984"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBProject/Network Manager/MyNetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "getReviews(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -19,7 +19,7 @@ class Home: UICollectionViewController {
 
     
    let BaseURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=3&api_key=6c91a3562a4da002fd32cd0819428f2e"
-     let Release_dateURL = "https://api.themoviedb.org/3/discover/movie?sort_by=release_date.desc&page=5&api_key=6c91a3562a4da002fd32cd0819428f2e"
+     let highest_rate = "https://api.themoviedb.org/3/discover/movie?sort_by=highest-rated.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
     
      var LikedMovies = [MoviePojo]();
     var MoviesArray = [MoviePojo]();
@@ -63,14 +63,14 @@ class Home: UICollectionViewController {
                dropDown.anchorView = menu // UIView or UIBarButtonItem
 
                // The list of items to display. Can be changed dynamically
-               dropDown.dataSource = ["Populatity", "Release Date"]
+               dropDown.dataSource = ["Populatity", "Highest Rate"]
                // Action triggered on selection
                dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                 if item == "Populatity"{
                     self.myNetwork.getConnection(URL: self.BaseURL);
 
                 }else{
-                    self.myNetwork.getConnection(URL: self.Release_dateURL);
+                    self.myNetwork.getConnection(URL: self.highest_rate);
 
                 }
                  print("Selected item: \(item) at index: \(index)")
@@ -214,8 +214,6 @@ class Home: UICollectionViewController {
                             release_date: MoviesArray[indexPath.row].release_date,
                             overview: MoviesArray[indexPath.row].overview,
                             poster_path: MoviesArray[indexPath.row].poster_path);
-              
-        
         
           let details = self.storyboard?.instantiateViewController(identifier: "details")as!Details
         
