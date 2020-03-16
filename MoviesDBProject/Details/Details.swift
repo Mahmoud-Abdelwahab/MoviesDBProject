@@ -60,9 +60,20 @@ UICollectionViewDelegate, UICollectionViewDataSource {
         myTitle.text = myPojo?.title
         overview.text = myPojo?.overview
         releaseYear.text = myPojo?.release_date
-        cosmosFunc(cosmos: cosmos, rating: myPojo?.vote_average ?? 1)
-        myImage?.sd_setImage(with: URL(string: myPojo!.poster_path!), placeholderImage: UIImage(named: "film.jpg"))
         
+        
+     
+               
+               //MoviesArray[indexPath.row].vote_average ?? 1
+     
+                     
+        
+        cosmosFunc(cosmos: cosmos, rating: myPojo?.vote_average ?? 1)
+        
+        
+        if let x =  myPojo?.poster_path {
+        myImage?.sd_setImage(with: URL(string: x), placeholderImage: UIImage(named: "film.jpg"))
+        }
         if  (myReviewsContent!.count>0 && myReviewsAuther!.count>0)
           {
             print("Contains a value!")
@@ -75,40 +86,65 @@ UICollectionViewDelegate, UICollectionViewDataSource {
 
       }
     
-    var liked  = false ;
+  
     @IBAction func AddToFavouriteBtn(_ sender: Any) {
         
       //  FavoritImage.image =
    
 //       FavoritImage.tintColor.ciColor.green
 //           FavoritImage.image?.withRenderingMode(.alwaysTemplate)
-    
-       
-        if(liked == false )
-        {
-            
-        
-            if checkIfFileExist() != true
-            {
-            mycore.AddFavouriteCoreData(movieId: myPojo?.id ?? 0.0)
-            liked = true
-            favBtn.tintColor = UIColor.green
-
-                print("Like ******** > ")
-                
-            }
-
-        }else if( liked == true)
-        {
-           // call delete with id then make liked = false
-            mycore.dislike(id: myPojo!.id!)
-            liked = false ;
-            favBtn.tintColor = UIColor.orange
+      if checkIfFileExist() != true
+      {
+        mycore.AddFavouriteCoreData(movieId: myPojo?.id ?? 0.0)
+        Details.liked = true
+        favBtn.tintColor = UIColor.green
 
             print("Like ******** > ")
+      } else{
+        mycore.dislike(id: myPojo!.id!)
+                                 Details.liked = false ;
+                                 favBtn.tintColor = UIColor.red
 
+                                 print("Like ******** > ")
         }
-        
+       
+//        if(Details.liked == false )
+//        {
+//            
+//        
+//            if checkIfFileExist() != true
+//            {
+//            mycore.AddFavouriteCoreData(movieId: myPojo?.id ?? 0.0)
+//            Details.liked = true
+//            favBtn.tintColor = UIColor.green
+//
+//                print("Like ******** > ")
+//                
+//            }
+//
+//        }else if( Details.liked == true)
+//        {
+//            
+//            if checkIfFileExist() != true
+//                       {
+//                       mycore.AddFavouriteCoreData(movieId: myPojo?.id ?? 0.0)
+//                       Details.liked = true
+//                       favBtn.tintColor = UIColor.green
+//
+//                           print("Like ******** > ")
+//                           
+//            } else{
+//                // call delete with id then make liked = false
+//                           mycore.dislike(id: myPojo!.id!)
+//                           Details.liked = false ;
+//                           favBtn.tintColor = UIColor.orange
+//
+//                           print("Like ******** > ")
+//
+//            }
+//          
+//        }
+//        
          //liked = true
    
     }
@@ -157,11 +193,45 @@ UICollectionViewDelegate, UICollectionViewDataSource {
     func cosmosFunc(cosmos:CosmosView , rating :Double ) {
          // Change the cosmos view rating
     
-        cosmos.rating = rating
+        var range : Double = 0
+                    if (rating < 1){
+                        range = 0.5
+                    }else if (rating < 2){
+                       range = 1
+                        
+                    }else if (rating < 3){
+                        range = 1.5
+                        
+                    }else if (rating < 4){
+                       range = 2
+                        
+                    }else if (rating < 5){
+                        range = 2.5
+                        
+                    }else if (rating < 6){
+                   range = 3
+                        
+                    }else if (rating < 7){
+                        range = 3.5
+                        
+                    }else if (rating < 8){
+                       range = 4
+                        
+                    }else if (rating < 9){
+                        range = 4.5
+                        
+                    }else if (rating <= 10){
+                    range = 5 }
+        
+        
+        
+        cosmos.rating = range
 
          // Change the text
         cosmos.text = "(123)"
-
+        cosmos.settings.fillMode = .full
+              
+               cosmos.settings.updateOnTouch = false
          // Called when user finishes changing the rating by lifting the finger from the view.
          // This may be a good place to save the rating in the database or send to the server.
         cosmos.didFinishTouchingCosmos = { rating in }
@@ -255,8 +325,7 @@ extension Details : VideosDelegate{
         
         myVideos = videos
          print("videos ********* ")
-       // self.myCollectionView.reloadData();
-   
+        self.myCollectionView.reloadData();
     }
    
    

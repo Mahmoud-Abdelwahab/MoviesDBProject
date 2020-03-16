@@ -27,15 +27,18 @@ class Home: UICollectionViewController {
     let monitor = NWPathMonitor()
    let dropDown = DropDown()
     let myCore = MyCoreData.sharedCore;
-    
+     let myNetwork = MyNetworkManger.sharedNetwork;
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myNetwork = MyNetworkManger(home: self);
+      //  let myNetwork = MyNetworkManger(home: self);
+        
        
+        myNetwork.myDelegate = self ;
+        
         monitor.pathUpdateHandler = { pathUpdateHandler in
                       if pathUpdateHandler.status == .satisfied {
                           print("Internet connection is on.")
-                        myNetwork.getConnection(URL: self.BaseURL);
+                        self.myNetwork.getConnection(URL: self.BaseURL);
                        DispatchQueue.main.async {
                        }
                         
@@ -64,10 +67,10 @@ class Home: UICollectionViewController {
                // Action triggered on selection
                dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                 if item == "Populatity"{
-                    myNetwork.getConnection(URL: self.BaseURL);
+                    self.myNetwork.getConnection(URL: self.BaseURL);
 
                 }else{
-                    myNetwork.getConnection(URL: self.Release_dateURL);
+                    self.myNetwork.getConnection(URL: self.Release_dateURL);
 
                 }
                  print("Selected item: \(item) at index: \(index)")
@@ -121,32 +124,79 @@ class Home: UICollectionViewController {
         
         var s = MoviesArray[indexPath.row].poster_path! //s="https://image.tmdb.org/t/p/w600_and_h900_bestv2//"
       cell.MyImage.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
+     
+       // Change the text
+                    cell.cos.settings.fillMode = .full
+             
+                    cell.cos.text = "(123)"
+                    cell.cos.settings.updateOnTouch = false
+                  cell.cos.settings.disablePanGestures = true
+                     // Called when user finishes changing the rating by lifting the finger from the view.
+                     // This may be a good place to save the rating in the database or send to the server.
+                    cell.cos.didFinishTouchingCosmos = { rating in }
+
+                     // A closure that is called when user changes the rating by touching the view.
+                     // This can be used to update UI as the rating is being changed by moving a finger.
+                   cell.cos.didTouchCosmos = { rating in }
         
+        var range : Double = 0
+                          if ((MoviesArray[indexPath.row].vote_average ?? 1) < 1){
+                              range = 0.5
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 2){
+                             range = 1
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 3){
+                              range = 1.5
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 4){
+                             range = 2
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 5){
+                              range = 2.5
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 6){
+                         range = 3
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 7){
+                              range = 3.5
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 8){
+                             range = 4
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) < 9){
+                              range = 4.5
+                              
+                          }else if ((MoviesArray[indexPath.row].vote_average ?? 1) <= 10){
+                          range = 5 }
+        //MoviesArray[indexPath.row].vote_average ?? 1
+ cell.cos.rating = range
+              
         
-        
-        cosmosFunc(cosmos: cell.cos, rating: MoviesArray[indexPath.row].vote_average ?? 1)
+      //  cosmosFunc(cosmos: cell.cos, rating: MoviesArray[indexPath.row].vote_average ?? 1)
         return cell
         // Configure the cell
     
       
     }
 
-    func cosmosFunc(cosmos:CosmosView , rating :Double ) {
-         // Change the cosmos view rating
-    
-        cosmos.rating = rating
-
-         // Change the text
-        cosmos.text = "(123)"
-      cosmos.settings.disablePanGestures = true
-         // Called when user finishes changing the rating by lifting the finger from the view.
-         // This may be a good place to save the rating in the database or send to the server.
-        cosmos.didFinishTouchingCosmos = { rating in }
-
-         // A closure that is called when user changes the rating by touching the view.
-         // This can be used to update UI as the rating is being changed by moving a finger.
-       cosmos.didTouchCosmos = { rating in }
-    }
+//    func cosmosFunc(cosmos:CosmosView , rating :Double ) {
+//         // Change the cosmos view rating
+//
+//        cosmos.rating = rating
+//
+//         // Change the text
+//        cosmos.settings.fillMode = .full
+//        cosmos.text = "(123)"
+//        cosmos.settings.updateOnTouch = false
+//      cosmos.settings.disablePanGestures = true
+//         // Called when user finishes changing the rating by lifting the finger from the view.
+//         // This may be a good place to save the rating in the database or send to the server.
+//        cosmos.didFinishTouchingCosmos = { rating in }
+//
+//         // A closure that is called when user changes the rating by touching the view.
+//         // This can be used to update UI as the rating is being changed by moving a finger.
+//       cosmos.didTouchCosmos = { rating in }
+//    }
     // MARK: UICollectionViewDelegate
 
     /*
@@ -169,12 +219,15 @@ class Home: UICollectionViewController {
         
           let details = self.storyboard?.instantiateViewController(identifier: "details")as!Details
         
-        let myNet = MyNetworkManger(details: details);
+       // let myNet = MyNetworkManger(details: details);
+        myNetwork.myDelegate = self;
+        myNetwork.myReviewDelegate = details
+        myNetwork.myVideoDelegate = details
         let myID =  MoviesArray[indexPath.row].id! ;
          
            // myID643102
-        myNet.getVideos(id: myID)
-        myNet.getReviews(id: myID)
+        myNetwork.getVideos(id: myID)
+        myNetwork.getReviews(id: myID)
        // myNet.getReviews(id: myID)
                 
         details.myPojo = obj;

@@ -40,11 +40,28 @@ class Favortite: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let details = self.storyboard?.instantiateViewController(identifier: "home")as!Home
+        let myNet = MyNetworkManger.sharedNetwork;
+        let details = self.storyboard?.instantiateViewController(identifier: "details")as!Details
         
-           
+         
+        // let myNet = MyNetworkManger(details: details);
+//myNet.myDelegate = self as! Home;
+                myNet.myReviewDelegate = details
+                myNet.myVideoDelegate = details
+        
+         details.myPojo =  favouriteList[indexPath.row] ;
+        details.myVideos =  myNet.getVideos(id: favouriteList[indexPath.row].id!)
+        MyNetworkManger.sharedNetwork.getReviews(id: favouriteList[indexPath.row].id!)
+         
             
           self.navigationController?.pushViewController(details, animated: true)
+        
+
+         
+       
+      
+        
+        
     }
     
     
@@ -79,7 +96,38 @@ class Favortite: UITableViewController {
     func cosmosFunc(cosmos:CosmosView , rating :Double ) {
          // Change the cosmos view rating
     
-        cosmos.rating = rating
+        var range : Double = 0
+         if (rating < 1){
+             range = 0.5
+         }else if (rating < 2) {
+            range = 1
+             
+         }else if (rating < 3){
+             range = 1.5
+             
+         }else if (rating < 4){
+            range = 2
+             
+         }else if (rating < 5){
+             range = 2.5
+             
+         }else if (rating < 6){
+        range = 3
+             
+         }else if (rating < 7){
+             range = 3.5
+             
+         }else if (rating < 8){
+            range = 4
+             
+         }else if (rating < 9){
+             range = 4.5
+             
+         }else if (rating <= 10){
+         range = 5 }
+        
+        
+        cosmos.rating = range
 
          // Change the text
         cosmos.text = "(123)"
@@ -100,17 +148,20 @@ class Favortite: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+          
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+              core.dislike(id: favouriteList[indexPath.row].id!
+            )
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-    */
+    
 
   
     

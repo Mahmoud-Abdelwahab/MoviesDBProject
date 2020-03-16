@@ -14,14 +14,19 @@ class MyNetworkManger{
     var myVideoDelegate : VideosDelegate?
     var myReviewDelegate : GetReviewsDelegate?
     private  var MovieURl = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.%20desc&api_key=6c91a3562a4da002fd32cd0819428f2e"
-    
-    init(home:Home) {
-        myDelegate = home as? GetMovieApiDelegate ;
+   static let sharedNetwork = MyNetworkManger();
+ 
+    private init(){
+        
+       
     }
-    init(details:Details) {
-        myVideoDelegate = details as? VideosDelegate ;
-          myReviewDelegate = details as? GetReviewsDelegate ;
-    }
+//    init(home:Home) {
+//   myDelegate = home as? GetMovieApiDelegate ;
+//    }
+//    init(details:Details) {
+// myVideoDelegate = details as? VideosDelegate ;
+//                myReviewDelegate = details as? GetReviewsDelegate ;
+//    }
     
       
       
@@ -57,12 +62,12 @@ class MyNetworkManger{
     
     //////////// videos /////////////
     
-    func getVideos(id : Double){
+    func getVideos(id : Double)->[String]{
         
-    //    var vedioArray = [String]();
+       var vedioArray = [String]();
 
        
-       var vedioArray = Array<String>()
+      // var vedioArray = Array<String>()
         
         
         var ViedoURL : String = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=6c91a3562a4da002fd32cd0819428f2e"
@@ -111,7 +116,7 @@ class MyNetworkManger{
                     
                        }
                        }
-        
+        return vedioArray;
     }
     
         
