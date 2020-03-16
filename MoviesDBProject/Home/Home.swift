@@ -92,15 +92,7 @@ class Home: UICollectionViewController {
        }
        
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
     // MARK: UICollectionViewDataSource
 
@@ -179,32 +171,7 @@ class Home: UICollectionViewController {
       
     }
 
-//    func cosmosFunc(cosmos:CosmosView , rating :Double ) {
-//         // Change the cosmos view rating
-//
-//        cosmos.rating = rating
-//
-//         // Change the text
-//        cosmos.settings.fillMode = .full
-//        cosmos.text = "(123)"
-//        cosmos.settings.updateOnTouch = false
-//      cosmos.settings.disablePanGestures = true
-//         // Called when user finishes changing the rating by lifting the finger from the view.
-//         // This may be a good place to save the rating in the database or send to the server.
-//        cosmos.didFinishTouchingCosmos = { rating in }
-//
-//         // A closure that is called when user changes the rating by touching the view.
-//         // This can be used to update UI as the rating is being changed by moving a finger.
-//       cosmos.didTouchCosmos = { rating in }
-//    }
-    // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -247,30 +214,7 @@ class Home: UICollectionViewController {
     
     }
  
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    
-    
-    
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
+   
 
 }
 

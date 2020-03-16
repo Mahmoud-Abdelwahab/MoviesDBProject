@@ -88,8 +88,7 @@ class Favortite: UITableViewController {
       
 //        cell.title.text = "mahmoud"
 //        let s = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg"
-//        cell.Fav_Image.sd_setImage(with: URL(string: s), placeholderImage: UIImage(named: "placeholder.png"))
-        // cosmosFunc(cosmos: cell.cos, rating: favourite![indexPath.row].vote_average ?? 1)
+
         return cell
     }
 
@@ -140,13 +139,6 @@ class Favortite: UITableViewController {
          // This can be used to update UI as the rating is being changed by moving a finger.
        cosmos.didTouchCosmos = { rating in }
     }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
   
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -158,6 +150,13 @@ class Favortite: UITableViewController {
        
         self.tableView.reloadData()
         self.tableView.endUpdates()
+        
+        // i tried many time to refresh table view after deleteing cell but in dons't works
+        
+        
+        
+        
+        
       } else if editingStyle == .insert {
           // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
       }
